@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 250" width="100%" height="250">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020e07" />
+      <stop offset="50%" stop-color="#052414" />
+      <stop offset="100%" stop-color="#021208" />
+    </linearGradient>
+
+    <!-- Node Gradient 1: Sensor Mesh -->
+    <linearGradient id="meshGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+
+    <!-- Node Gradient 2: Controller -->
+    <linearGradient id="ctrlGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#042f2e" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="archGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes signalFlow {
+        0% { stroke-dashoffset: 60; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes nodePulse {
+        0%, 100% { opacity: 0.8; }
+        50% { opacity: 1; }
+      }
+      .signal-wire {
+        stroke-dasharray: 6 8;
+        animation: signalFlow 1.8s linear infinite;
+      }
+      .pulse-chip {
+        animation: nodePulse 3s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="916" height="246" rx="14" fill="url(#archBg)" stroke="#10b981" stroke-width="1.6" stroke-opacity="0.8" />
+
+  <!-- Top Title Ribbon -->
+  <g transform="translate(30, 26)">
+    <circle cx="0" cy="0" r="4" fill="#00f59b">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="14" y="4" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" fill="#a7f3d0" letter-spacing="1.5">
+      SYSTEM ARCHITECTURE // <tspan fill="#00f59b">NATURE-INSPIRED DISTRIBUTED TOPOLOGY</tspan>
+    </text>
+  </g>
+
+  <!-- Level 1 Nodes -->
+  <!-- Node A: RAINFOREST SENSOR MESH -->
+  <g transform="translate(60, 52)">
+    <rect x="0" y="0" width="340" height="54" rx="8" fill="url(#meshGrad)" stroke="#00f59b" stroke-width="1.5" filter="url(#archGlow)" class="pulse-chip" />
+    <text x="16" y="24" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="0.5">🌲 RAINFOREST SENSOR MESH</text>
+    <text x="16" y="42" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="500" fill="#a7f3d0">Distributed Canopy Nodes • Micro-Climate • Audio Telemetry</text>
+  </g>
+
+  <!-- Level 1 Interconnect Arrow -->
+  <g transform="translate(400, 79)">
+    <line x1="0" y1="0" x2="110" y2="0" stroke="#00f59b" stroke-width="2.2" class="signal-wire" />
+    <polygon points="110,-4 118,0 110,4" fill="#00f59b" />
+    <rect x="18" y="-12" width="76" height="15" rx="3" fill="#02140a" stroke="#10b981" stroke-width="0.8" />
+    <text x="56" y="-1" font-family="monospace" font-size="8.5" font-weight="bold" fill="#34d399" text-anchor="middle">LoRa / ESP-NOW</text>
+  </g>
+
+  <!-- Node B: RTOS EMBEDDED CONTROLLER -->
+  <g transform="translate(520, 52)">
+    <rect x="0" y="0" width="340" height="54" rx="8" fill="url(#ctrlGrad)" stroke="#14b8a6" stroke-width="1.5" filter="url(#archGlow)" class="pulse-chip" />
+    <text x="16" y="24" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="0.5">⚡ RTOS EMBEDDED CONTROLLER</text>
+    <text x="16" y="42" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="500" fill="#99f6e4">Deterministic FreeRTOS • Dual-Core ESP32-S3 / STM32</text>
+  </g>
+
+  <!-- Central Bus Trunk Wire going down -->
+  <g transform="translate(690, 106)">
+    <line x1="0" y1="0" x2="0" y2="28" stroke="#14b8a6" stroke-width="2" />
+  </g>
+
+  <!-- Horizontal Distribution Bus -->
+  <g transform="translate(195, 134)">
+    <line x1="0" y1="0" x2="525" y2="0" stroke="#14b8a6" stroke-width="2" />
+    <!-- Center junction circle -->
+    <circle cx="495" cy="0" r="3.5" fill="#00f59b" />
+    <!-- Branch A drop line -->
+    <line x1="0" y1="0" x2="0" y2="18" stroke="#00f59b" stroke-width="1.8" class="signal-wire" />
+    <polygon points="-3,18 0,24 3,18" fill="#00f59b" />
+    <!-- Branch B drop line -->
+    <line x1="262" y1="0" x2="262" y2="18" stroke="#facc15" stroke-width="1.8" class="signal-wire" />
+    <polygon points="259,18 262,24 265,18" fill="#facc15" />
+    <!-- Branch C drop line -->
+    <line x1="525" y1="0" x2="525" y2="18" stroke="#38bdf8" stroke-width="1.8" class="signal-wire" />
+    <polygon points="522,18 525,24 528,18" fill="#38bdf8" />
+  </g>
+
+  <!-- Level 2 Functional Branches (3 Cards) -->
+  <!-- Branch 1: BIOMIMETIC SENSING & ACOUSTICS -->
+  <g transform="translate(60, 158)">
+    <rect x="0" y="0" width="250" height="68" rx="8" fill="#042315" stroke="#00f59b" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4" fill="#00f59b" />
+    <text x="26" y="22" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700" fill="#f0fdf4">BIOMIMETIC ACOUSTICS</text>
+    <text x="14" y="42" font-family="'Segoe UI', sans-serif" font-size="10" fill="#a7f3d0">Fauna Vocalization &amp; Bio-telemetry</text>
+    <text x="14" y="58" font-family="'Segoe UI', sans-serif" font-size="9" fill="#6ee7b7">TinyML Edge Audio Classifier</text>
+  </g>
+
+  <!-- Branch 2: ULTRA-LOW-POWER SLEEP HARVESTING -->
+  <g transform="translate(335, 158)">
+    <rect x="0" y="0" width="250" height="68" rx="8" fill="#141a06" stroke="#facc15" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4" fill="#facc15" />
+    <text x="26" y="22" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700" fill="#fef9c3">ENERGY HARVESTING</text>
+    <text x="14" y="42" font-family="'Segoe UI', sans-serif" font-size="10" fill="#fef08a">Solar Capacitor MPPT &amp; Deep Sleep</text>
+    <text x="14" y="58" font-family="'Segoe UI', sans-serif" font-size="9" fill="#facc15">15µA Deep-Sleep Energy Autonomy</text>
+  </g>
+
+  <!-- Branch 3: REAL-TIME CLOUD TELEMETRY -->
+  <g transform="translate(610, 158)">
+    <rect x="0" y="0" width="250" height="68" rx="8" fill="#051f2d" stroke="#38bdf8" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4" fill="#38bdf8" />
+    <text x="26" y="22" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700" fill="#e0f2fe">CLOUD TELEMETRY</text>
+    <text x="14" y="42" font-family="'Segoe UI', sans-serif" font-size="10" fill="#bae6fd">Sub-GHz Long Range Gateway</text>
+    <text x="14" y="58" font-family="'Segoe UI', sans-serif" font-size="9" fill="#7dd3fc">MQTT Broker &amp; InfluxDB Analytics</text>
+  </g>
+</svg>

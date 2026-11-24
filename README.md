@@ -294,21 +294,17 @@
 <!-- ========================================== -->
 ## 🔬 RESEARCH & NATURE-INSPIRED COMPUTING
 
-```ascii
-[ RAINFOREST SENSOR MESH ] ──( LoRa / ESP-NOW )──> [ RTOS EMBEDDED CONTROLLER ]
-                                                            │
-  ┌─────────────────────────────────────────────────────────┴────────────────────────────────────────┐
-  ▼                                                          ▼                                       ▼
-[ BIOMIMETIC SENSING & ACOUSTICS ]             [ ULTRA-LOW-POWER SLEEP HARVESTING ]     [ REAL-TIME CLOUD TELEMETRY ]
-Fauna Vocalization & Micro-Climate Telemetry   Solar Capacitor MPPT & Deep Sleep (15µA) Sub-GHz Long Range Gateway
-```
+<div align="center">
+  <img src="assets/research-architecture.svg" alt="Nature-Inspired Distributed System Architecture" width="100%" />
+</div>
 
-### 🌿 1. Biomimetic Sensor Networks & Eco-Acoustics
-- **Research Scope:** Audio feature extraction of Amazon wildlife vocalizations using low-power edge microcontrollers, filtering background river water acoustics to detect rare species and illicit deforestation.
-- **Hardware Topology:** Micro-power MEMS microphones integrated with ESP32-S3 running lightweight TinyML models.
+<br />
 
-### 🔋 2. Environmental Energy Harvesting
-- **Research Scope:** Continuous self-powering sensor stations utilizing ambient temperature gradients and solar micro-cells in dense forest understories where direct sunlight is filtered by the canopy.
+| Research Thrust & Domain | Theoretical Scope, Embedded Topology & Outcomes |
+| :--- | :--- |
+| 🌿 **01. Biomimetic Sensing &amp; Eco-Acoustics**<br>![Focus](https://img.shields.io/badge/FOCUS-EDGE_TinyML-00f59b?style=flat-square) ![Domain](https://img.shields.io/badge/DOMAIN-BIO_TELEMETRY-10b981?style=flat-square) | **Research Scope:** Real-time audio feature extraction and spectral filtering of Amazon wildlife vocalizations and river current turbulence to detect rare fauna presence and illegal deforestation activities in real time.<br><br>**Hardware &amp; Protocols:** Ultra-low-power MEMS microphones, ESP32-S3 Dual-Core (240MHz), Edge Impulse TinyML Neural Audio Classifiers, Sub-GHz LoRa gateway. |
+| 🔋 **02. Autonomous Energy Harvesting**<br>![Focus](https://img.shields.io/badge/FOCUS-SOLAR_MPPT-facc15?style=flat-square) ![Domain](https://img.shields.io/badge/DOMAIN-ZERO_BATTERY-a3e635?style=flat-square) | **Research Scope:** Continuous self-powering sensor stations utilizing ambient temperature gradients and canopy-filtered solar micro-cells paired with super-capacitors for zero-maintenance operation in dense forest understories.<br><br>**Hardware &amp; Protocols:** BQ25570 Nano-Power Harvester, 5.5V Supercapacitor Bank, Deep-Sleep Duty Cycling (15µA quiescent current draw). |
+| 📡 **03. Resilient Forest Mesh Telemetry**<br>![Focus](https://img.shields.io/badge/FOCUS-SUB_GHz_MESH-38bdf8?style=flat-square) ![Domain](https://img.shields.io/badge/DOMAIN-LONG_RANGE-14b8a6?style=flat-square) | **Research Scope:** Self-healing multi-hop telemetry across dense rainforest foliage without cellular infrastructure, relaying environmental data packets through tree-canopy repeater nodes back to basecamp dashboards.<br><br>**Hardware &amp; Protocols:** Semtech SX1262 LoRa Transceivers, ESP-NOW Peer-to-Peer Protocol, AES-128 Encrypted Packet Payloads, InfluxDB Analytics. |
 
 <br />
 
@@ -324,30 +320,15 @@ Fauna Vocalization & Micro-Climate Telemetry   Solar Capacitor MPPT & Deep Sleep
 ## 🎓 EDUCATION & ENGINEERING JOURNEY
 
 <div align="center">
-
-```
-┌───────────────────────────────────────────────────────────────────────────────────────────┐
-│  YEAR             ACADEMIC & PROFESSIONAL ENGINEERING MILESTONES                          │
-├───────────────────────────────────────────────────────────────────────────────────────────┤
-│  2023 - 2027      BACHELOR OF ENGINEERING (B.E.)                                          │
-│  [Pre-Final Year] Electronics & Communication Engineering (ECE)                           │
-│                   M. KUMARASAMY COLLEGE OF ENGINEERING, KARUR                             │
-│                   Core: Embedded Systems, Signal Processing, Microcontrollers, VLSI       │
-│                                                                                           │
-│  2024 - Present   FOUNDED PROJIFYRA                                                       │
-│                   Hardware-software IoT freelancing startup & student project development │
-│                   Delivered turnkey embedded hardware prototypes & mentored 50+ peers     │
-│                                                                                           │
-│  2024 - Present   FOUNDED AMPORA                                                          │
-│                   Technical upskilling & career mentorship initiative for college peers   │
-│                   Coached students in HackerRank problem-solving & LinkedIn mastery       │
-│                                                                                           │
-│  2025 - Present   ADVANCED TELEMATICS & NATURE-INSPIRED IoT R&D                           │
-│                   Edge AI sensor networks, environmental instrumentation & smart systems  │
-└───────────────────────────────────────────────────────────────────────────────────────────┘
-```
-
+  <p>Academic milestones, engineering leadership, venture founding, and hands-on technological innovations.</p>
 </div>
+
+| Timeline & Role | Institutional & Entrepreneurial Engineering Milestones |
+| :---: | :--- |
+| ![2023 - 2027](https://img.shields.io/badge/2023_--_2027-ACADEMIC-00f59b?style=for-the-badge&labelColor=042010) | 🎓 **Bachelor of Engineering (B.E.) – Pre-Final Year (3rd Year)**<br>🏛️ **M. Kumarasamy College of Engineering, Karur**<br>📘 **Specialization:** Electronics &amp; Communication Engineering (ECE)<br>🔬 **Core Curriculum:** Embedded Systems, Microcontroller Architectures, Signals &amp; Systems, VLSI Design, Sensor Networks |
+| ![2024 - Present](https://img.shields.io/badge/2024_--_PRES-FOUNDER-38bdf8?style=for-the-badge&labelColor=042010) | ⚡ **Founded PROJIFYRA – Primary Engineering Startup**<br>🚀 **Role:** Founder &amp; Chief IoT Architect<br>🛠️ **Milestone:** Delivering turnkey hardware-software embedded prototypes, custom PCB layouts, and full-stack IoT web dashboards; mentored over 50+ collegiate project teams. |
+| ![2024 - Present](https://img.shields.io/badge/2024_--_PRES-CO--FOUNDER-facc15?style=for-the-badge&labelColor=042010) | 🌱 **Founded AMPORA – Technical Upskilling &amp; Mentorship**<br>💡 **Role:** Founder &amp; Engineering Coach<br>📈 **Milestone:** Spearheaded peer-to-peer technical development workshops, HackerRank algorithmic problem-solving bootcamps, and professional developer personal branding on LinkedIn. |
+| ![2025 - Present](https://img.shields.io/badge/2025_--_PRES-R%26D_LEAD-a3e635?style=for-the-badge&labelColor=042010) | 🔬 **Advanced Telematics &amp; Nature-Inspired IoT R&amp;D**<br>🌿 **Role:** Independent Embedded Systems Researcher<br>📡 **Milestone:** Designing edge AI sensor arrays, autonomous geotechnical seismic alert stations, and fault-tolerant transit telemetry modules. |
 
 <br />
 
@@ -384,30 +365,20 @@ Whether you are looking to commission an **IoT hardware-software prototype** thr
 
 <div align="center">
 
-  <table border="0" cellpadding="8" cellspacing="0">
-    <tr>
-      <td align="center">
-        <a href="mailto:hyprpranav@gmail.com">
-          <img src="https://img.shields.io/badge/EMAIL-hyprpranav%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-        </a>
-      </td>
-      <td align="center">
-        <a href="tel:+917846937655">
-          <img src="https://img.shields.io/badge/PHONE_%2F_WHATSAPP-%2B91_78469_37655-25d366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Phone" />
-        </a>
-      </td>
-      <td align="center">
-        <a href="https://linkedin.com/in/hyprpranav">
-          <img src="https://img.shields.io/badge/LINKEDIN-Harish_Pranav_S-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-        </a>
-      </td>
-      <td align="center">
-        <a href="https://github.com/hyprpranav">
-          <img src="https://img.shields.io/badge/GITHUB-%40hyprpranav-181717?style=for-the-badge&logo=github&logoColor=00f59b" alt="GitHub" />
-        </a>
-      </td>
-    </tr>
-  </table>
+  <p>
+    <a href="mailto:hyprpranav@gmail.com">
+      <img src="https://img.shields.io/badge/EMAIL-hyprpranav%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    </a>
+    <a href="tel:+917846937655">
+      <img src="https://img.shields.io/badge/PHONE_%2F_WHATSAPP-%2B91_78469_37655-25d366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Phone" />
+    </a>
+    <a href="https://linkedin.com/in/hyprpranav">
+      <img src="https://img.shields.io/badge/LINKEDIN-Harish_Pranav_S-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    </a>
+    <a href="https://github.com/hyprpranav">
+      <img src="https://img.shields.io/badge/GITHUB-%40hyprpranav-181717?style=for-the-badge&logo=github&logoColor=00f59b" alt="GitHub" />
+    </a>
+  </p>
 
   <br />
 
