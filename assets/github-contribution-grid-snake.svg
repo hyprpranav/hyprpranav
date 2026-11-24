@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 180" width="100%" height="180">
+  <defs>
+    <linearGradient id="forestGridBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021208" />
+      <stop offset="100%" stop-color="#041a0d" />
+    </linearGradient>
+
+    <filter id="forestDotGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes crawlSnakeForest {
+        0% { transform: translate(0, 0); }
+        25% { transform: translate(120px, 0); }
+        50% { transform: translate(120px, 48px); }
+        75% { transform: translate(260px, 48px); }
+        100% { transform: translate(400px, 12px); }
+      }
+      .snake-head-forest {
+        animation: crawlSnakeForest 8s linear infinite alternate;
+      }
+      .forest-telemetry-txt {
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+        fill: #6ee7b7;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Plate -->
+  <rect x="2" y="2" width="876" height="176" rx="10" fill="url(#forestGridBg)" stroke="#064e3b" stroke-width="1.4" />
+
+  <!-- Top Terminal Bar -->
+  <g transform="translate(24, 24)">
+    <circle cx="0" cy="0" r="4" fill="#10b981" />
+    <circle cx="14" cy="0" r="4" fill="#a3e635" />
+    <circle cx="28" cy="0" r="4" fill="#facc15" />
+    <text x="50" y="4" class="forest-telemetry-txt">AMAZON_CONTRIBUTION_BIOSPHERE // DEV_VELOCITY: 365_DAYS // ECOSYSTEM: ACTIVE</text>
+  </g>
+
+  <!-- Visual Contribution Matrix Dots in Forest Greens -->
+  <g transform="translate(30, 48)">
+    <g fill="#062e19">
+      <!-- Col samples with emerald & lime activity levels -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="10" height="10" rx="2" fill="#062e19" />
+        <rect x="15" y="0" width="10" height="10" rx="2" fill="#047857" />
+        <rect x="30" y="0" width="10" height="10" rx="2" fill="#10b981" />
+        <rect x="45" y="0" width="10" height="10" rx="2" fill="#00f59b" filter="url(#forestDotGlow)" />
+        <rect x="60" y="0" width="10" height="10" rx="2" fill="#a3e635" />
+        <rect x="75" y="0" width="10" height="10" rx="2" fill="#062e19" />
+        <rect x="90" y="0" width="10" height="10" rx="2" fill="#14b8a6" />
+        <rect x="105" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="120" y="0" width="10" height="10" rx="2" fill="#10b981" />
+        <rect x="135" y="0" width="10" height="10" rx="2" fill="#062e19" />
+        <rect x="150" y="0" width="10" height="10" rx="2" fill="#047857" />
+        <rect x="165" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="180" y="0" width="10" height="10" rx="2" fill="#a3e635" />
+        <rect x="195" y="0" width="10" height="10" rx="2" fill="#10b981" />
+        <rect x="210" y="0" width="10" height="10" rx="2" fill="#062e19" />
+        <rect x="225" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="240" y="0" width="10" height="10" rx="2" fill="#14b8a6" />
+        <rect x="255" y="0" width="10" height="10" rx="2" fill="#a3e635" />
+        <rect x="270" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="285" y="0" width="10" height="10" rx="2" fill="#10b981" />
+        <rect x="300" y="0" width="10" height="10" rx="2" fill="#062e19" />
+        <rect x="315" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="330" y="0" width="10" height="10" rx="2" fill="#a3e635" />
+        <rect x="345" y="0" width="10" height="10" rx="2" fill="#10b981" />
+        <rect x="360" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="375" y="0" width="10" height="10" rx="2" fill="#062e19" />
+        <rect x="390" y="0" width="10" height="10" rx="2" fill="#047857" />
+        <rect x="405" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="420" y="0" width="10" height="10" rx="2" fill="#a3e635" />
+        <rect x="435" y="0" width="10" height="10" rx="2" fill="#10b981" />
+        <rect x="450" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="465" y="0" width="10" height="10" rx="2" fill="#062e19" />
+        <rect x="480" y="0" width="10" height="10" rx="2" fill="#047857" />
+        <rect x="495" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="510" y="0" width="10" height="10" rx="2" fill="#a3e635" />
+        <rect x="525" y="0" width="10" height="10" rx="2" fill="#10b981" />
+        <rect x="540" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="555" y="0" width="10" height="10" rx="2" fill="#062e19" />
+        <rect x="570" y="0" width="10" height="10" rx="2" fill="#047857" />
+        <rect x="585" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="600" y="0" width="10" height="10" rx="2" fill="#a3e635" />
+        <rect x="615" y="0" width="10" height="10" rx="2" fill="#10b981" />
+        <rect x="630" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="645" y="0" width="10" height="10" rx="2" fill="#062e19" />
+        <rect x="660" y="0" width="10" height="10" rx="2" fill="#047857" />
+        <rect x="675" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="690" y="0" width="10" height="10" rx="2" fill="#a3e635" />
+        <rect x="705" y="0" width="10" height="10" rx="2" fill="#10b981" />
+        <rect x="720" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="735" y="0" width="10" height="10" rx="2" fill="#062e19" />
+        <rect x="750" y="0" width="10" height="10" rx="2" fill="#047857" />
+        <rect x="765" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+        <rect x="780" y="0" width="10" height="10" rx="2" fill="#a3e635" />
+        <rect x="795" y="0" width="10" height="10" rx="2" fill="#10b981" />
+        <rect x="810" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+      </g>
+      <g transform="translate(0, 14)">
+        <rect x="0" y="0" width="820" height="70" fill="none" />
+        <path d="M 0 0 L 820 0 M 0 14 L 820 14 M 0 28 L 820 28 M 0 42 L 820 42 M 0 56 L 820 56 M 0 70 L 820 70" stroke="#062e19" stroke-width="1.5" stroke-dasharray="10 5" />
+      </g>
+    </g>
+
+    <!-- Animated Emerald Anaconda Snake Sprite -->
+    <g class="snake-head-forest" transform="translate(140, 20)">
+      <rect x="-36" y="0" width="10" height="10" rx="2" fill="#047857" />
+      <rect x="-24" y="0" width="10" height="10" rx="2" fill="#10b981" />
+      <rect x="-12" y="0" width="10" height="10" rx="2" fill="#00f59b" />
+      <!-- Snake Head with Firefly Glow -->
+      <rect x="0" y="0" width="10" height="10" rx="2" fill="#facc15" filter="url(#forestDotGlow)" />
+      <circle cx="5" cy="5" r="2" fill="#02140a" />
+    </g>
+  </g>
+
+  <!-- Legend and Metric Bar -->
+  <g transform="translate(30, 155)">
+    <text x="0" y="0" class="forest-telemetry-txt">FOREST COMMITS: <tspan fill="#00f59b">PERSISTENT</tspan> | BIODIVERSITY VELOCITY: <tspan fill="#a3e635">HIGH</tspan></text>
+    <g transform="translate(680, -8)">
+      <text x="-35" y="7" class="forest-telemetry-txt">LESS</text>
+      <rect x="0" y="0" width="9" height="9" rx="2" fill="#062e19" />
+      <rect x="13" y="0" width="9" height="9" rx="2" fill="#047857" />
+      <rect x="26" y="0" width="9" height="9" rx="2" fill="#10b981" />
+      <rect x="39" y="0" width="9" height="9" rx="2" fill="#a3e635" />
+      <rect x="52" y="0" width="9" height="9" rx="2" fill="#00f59b" />
+      <text x="68" y="7" class="forest-telemetry-txt">MORE</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 140" width="100%" height="140">
+  <defs>
+    <linearGradient id="projJungleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02140a" />
+      <stop offset="100%" stop-color="#042312" />
+    </linearGradient>
+    <linearGradient id="projLeafGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f59b" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <filter id="pjGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Border & Background -->
+  <rect x="2" y="2" width="446" height="136" rx="12" fill="url(#projJungleBg)" stroke="#10b981" stroke-width="1.8" stroke-opacity="0.8" />
+  
+  <!-- Foliage Accent Line -->
+  <line x1="20" y1="20" x2="60" y2="20" stroke="#00f59b" stroke-width="2" />
+  <circle cx="60" cy="20" r="2.5" fill="#a3e635" />
+
+  <!-- Logo Emblem: Tropical Leaf & Gear Core -->
+  <g transform="translate(48, 70)">
+    <path d="M 0 -22 C 16 -12, 20 12, 0 24 C -20 12, -16 -12, 0 -22 Z" fill="#064e3b" stroke="url(#projLeafGrad)" stroke-width="2" filter="url(#pjGlow)" />
+    <circle cx="0" cy="0" r="6" fill="#00f59b" />
+  </g>
+
+  <!-- Typography with ample clearance (NO OVERLAP) -->
+  <g transform="translate(88, 48)">
+    <text x="0" y="0" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="20" fill="#ffffff" letter-spacing="2.5">PROJIFYRA</text>
+    <!-- Badge placed with clear 25px offset past word width -->
+    <rect x="165" y="-14" width="75" height="18" rx="4" fill="#00f59b" fill-opacity="0.18" stroke="#00f59b" stroke-width="1" />
+    <text x="202" y="-1" font-family="monospace" font-size="9" font-weight="bold" fill="#00f59b" text-anchor="middle">PRIMARY</text>
+    
+    <text x="0" y="25" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#34d399">IoT &amp; Engineering Freelancing Startup</text>
+    <text x="0" y="45" font-family="'Segoe UI', sans-serif" font-size="10.5" fill="#a7f3d0">Hardware-Software IoT • Client &amp; College Prototypes</text>
+  </g>
+</svg>

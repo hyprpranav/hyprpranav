@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HARISH PRANAV S (hyprpranav) // Amazon Rainforest & Biosphere Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #020b06;
+      --bg-gh: #03140b;
+      --border-gh: #064e3b;
+      --emerald-bright: #00f59b;
+      --emerald-main: #10b981;
+      --biolime: #a3e635;
+      --gold: #facc15;
+      --river-teal: #14b8a6;
+      --text-main: #d1fae5;
+      --text-white: #f0fdf4;
+      --text-dim: #6ee7b7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Top Preview Control Header */
+    #preview-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(3, 20, 11, 0.96);
+      border-bottom: 1.5px solid rgba(0, 245, 155, 0.35);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand-title {
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-title .glow {
+      color: var(--emerald-bright);
+      text-shadow: 0 0 10px rgba(0, 245, 155, 0.7);
+    }
+
+    .status-badge {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.75rem;
+      background: rgba(0, 245, 155, 0.15);
+      color: var(--emerald-bright);
+      border: 1px solid var(--emerald-bright);
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+    }
+
+    /* Tab Switcher */
+    .view-switchers {
+      display: flex;
+      gap: 8px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 4px;
+      border-radius: 8px;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      color: #fff;
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, rgba(0, 245, 155, 0.25), rgba(16, 185, 129, 0.35));
+      color: var(--emerald-bright);
+      border: 1px solid var(--emerald-bright);
+      box-shadow: 0 0 14px rgba(0, 245, 155, 0.35);
+    }
+
+    .launch-arcade-btn {
+      background: linear-gradient(135deg, #00f59b 0%, #10b981 100%);
+      color: #021208;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 0 15px rgba(0, 245, 155, 0.4);
+      transition: transform 0.2s;
+    }
+
+    .launch-arcade-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 22px rgba(0, 245, 155, 0.7);
+    }
+
+    /* Container */
+    #main-content {
+      max-width: 1040px;
+      margin: 30px auto;
+      padding: 0 20px 80px;
+    }
+
+    /* GitHub Wrapper Mockup */
+    .github-profile-box {
+      background: var(--bg-gh);
+      border: 1.5px solid var(--border-gh);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 245, 155, 0.1);
+    }
+
+    .github-box-header {
+      background: #02140a;
+      border-bottom: 1px solid var(--border-gh);
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    .gh-file-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: monospace;
+      color: var(--text-white);
+    }
+
+    .readme-body {
+      padding: 32px 36px;
+      line-height: 1.6;
+    }
+
+    /* Markdown Styling in Preview */
+    .readme-body h1, .readme-body h2, .readme-body h3 {
+      color: var(--text-white);
+      margin-top: 28px;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .readme-body h2 {
+      border-bottom: 1px solid rgba(16, 185, 129, 0.25);
+      padding-bottom: 8px;
+    }
+
+    .readme-body p {
+      margin-bottom: 16px;
+    }
+
+    .readme-body a {
+      color: #34d399;
+      text-decoration: none;
+    }
+
+    .readme-body a:hover {
+      text-decoration: underline;
+    }
+
+    .readme-body img {
+      max-width: 100%;
+    }
+
+    .readme-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+    }
+
+    .readme-body td {
+      border: 1px solid rgba(6, 78, 59, 0.8);
+      padding: 16px;
+      background: rgba(2, 20, 11, 0.7);
+      border-radius: 6px;
+    }
+
+    .readme-body code {
+      background: rgba(6, 78, 59, 0.35);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 85%;
+      color: #00f59b;
+    }
+
+    .readme-body pre code {
+      display: block;
+      padding: 16px;
+      overflow-x: auto;
+      background: #021208;
+      color: #d1fae5;
+    }
+
+    /* Arcade Frame Container */
+    #arcade-view {
+      display: none;
+      width: 100%;
+      height: 88vh;
+      border: 1.5px solid var(--emerald-bright);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 35px rgba(0, 245, 155, 0.3);
+    }
+
+    #arcade-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Mobile view simulator */
+    .mobile-simulator {
+      max-width: 440px !important;
+      margin: 20px auto !important;
+      border: 8px solid #064e3b;
+      border-radius: 36px;
+      overflow: hidden;
+    }
+
+    .mobile-simulator .readme-body {
+      padding: 16px 14px;
+    }
+
+    .mobile-simulator table, .mobile-simulator td {
+      display: block;
+      width: 100% !important;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Bar -->
+  <header id="preview-header">
+    <div class="brand-title">
+      <span class="glow">HARISH PRANAV S</span> // PREVIEW SUITE
+      <span class="status-badge">🌿 JUNGLE THEME</span>
+    </div>
+
+    <div class="view-switchers">
+      <button id="tab-desktop" class="tab-btn active" onclick="switchView('desktop')">
+        🌿 Forest Profile
+      </button>
+      <button id="tab-mobile" class="tab-btn" onclick="switchView('mobile')">
+        📱 Mobile View
+      </button>
+      <button id="tab-arcade" class="tab-btn" onclick="switchView('arcade')">
+        🎮 Play Amazon Arcade
+      </button>
+      <button id="tab-cyber" class="tab-btn" onclick="switchView('cyber')">
+        ⚡ Archived Cyber Theme
+      </button>
+    </div>
+
+    <div>
+      <a href="./jungle-arcade/index.html" target="_blank" class="launch-arcade-btn">
+        <span>LAUNCH ARCADE IN FULL TAB</span> ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- Main View Container -->
+  <main id="main-content">
+    
+    <!-- Profile View (Desktop & Mobile) -->
+    <div id="profile-view" class="github-profile-box">
+      <div class="github-box-header">
+        <div class="gh-file-info">
+          <span>📖</span>
+          <strong>hyprpranav</strong> / <strong>README.md</strong> (Harish Pranav S)
+        </div>
+        <div>M. Kumarasamy College of Engineering • Pre-Final Year ECE</div>
+      </div>
+
+      <div class="readme-body">
+        
+        <!-- 01. HERO BANNER & IDENTITY -->
+        <div align="center">
+          <a href="#biosphere-telemetry">
+            <img src="assets/hero-banner.svg" alt="Harish Pranav S // Amazon Rainforest Engineering Biosphere" width="100%" />
+          </a>
+
+          <br /><br />
+
+          <!-- Dynamic Typing Subtitle -->
+          <a href="https://github.com/hyprpranav">
+            <img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=21&duration=3000&pause=1000&color=00F59B&center=true&vCenter=true&width=700&height=50&lines=Harish+Pranav+S+%7C+Electronics+%26+Comm.+Engineer;Embedded+Systems+%26+IoT+Hardware+Architect;Founder+%40+PROJIFYRA+(IoT+Freelancing);Founder+%40+AMPORA+(Student+Upskilling);Pre-Final+Year+ECE+%E2%80%A2+M.+Kumarasamy+College+of+Engg.;Nature-Inspired+Cyber-Physical+Innovation" alt="Typing Animation" />
+          </a>
+
+          <p align="center" style="font-size: 1.05rem; margin-top: 8px;">
+            <b>🌿 Architecting intelligent IoT hardware, low-power sensor telematics, and nature-inspired cyber-physical systems.</b>
+            <br />
+            <sub style="color: #6ee7b7;">🎓 <b>Pre-Final Year B.E. (ECE)</b> at <b>M. Kumarasamy College of Engineering, Karur</b> • 📍 Hometown: <b>Bathalagundu, Dindigul, Tamil Nadu</b></sub>
+          </p>
+
+          <!-- Quick Telemetry Chips -->
+          <p align="center">
+            <img src="https://img.shields.io/badge/BIOSPHERE-ONLINE-00f59b?style=for-the-badge&logo=treehouse&logoColor=021208&labelColor=042010" alt="Biosphere Online" />
+            <img src="https://img.shields.io/badge/CORE-ELECTRONICS_%26_COMM-10b981?style=for-the-badge&logo=microchip&logoColor=ffffff&labelColor=042010" alt="ECE Core" />
+            <img src="https://img.shields.io/badge/VENTURE-FOUNDER_%40_PROJIFYRA-14b8a6?style=for-the-badge&logo=circuitverse&logoColor=ffffff&labelColor=042010" alt="Projifyra" />
+            <img src="https://img.shields.io/badge/ACADEMIC-3RD_YEAR_ECE-a3e635?style=for-the-badge&logo=googlescholar&logoColor=021208&labelColor=042010" alt="3rd Year ECE" />
+          </p>
+
+          <!-- Communication Transmission Channels -->
+          <p align="center">
+            <a href="https://github.com/hyprpranav">
+              <img src="https://img.shields.io/badge/GITHUB-hyprpranav-00f59b?style=flat-square&logo=github&logoColor=021208&labelColor=03180c" alt="GitHub" />
+            </a>
+            <a href="https://linkedin.com/in/hyprpranav">
+              <img src="https://img.shields.io/badge/LINKEDIN-Harish_Pranav_S-0077b5?style=flat-square&logo=linkedin&logoColor=white&labelColor=03180c" alt="LinkedIn" />
+            </a>
+            <a href="mailto:hyprpranav@gmail.com">
+              <img src="https://img.shields.io/badge/EMAIL-hyprpranav%40gmail.com-ea4335?style=flat-square&logo=gmail&logoColor=white&labelColor=03180c" alt="Email" />
+            </a>
+            <a href="tel:+917846937655">
+              <img src="https://img.shields.io/badge/CALL_%2F_WHATSAPP-%2B91_78469_37655-25d366?style=flat-square&logo=whatsapp&logoColor=white&labelColor=03180c" alt="Phone" />
+            </a>
+            <a href="https://x.com/hyprpranav">
+              <img src="https://img.shields.io/badge/X_%2F_TWITTER-Follow-1da1f2?style=flat-square&logo=x&logoColor=white&labelColor=03180c" alt="Twitter" />
+            </a>
+          </p>
+        </div>
+
+        <br />
+        <div align="center"><img src="assets/cyber-divider.svg" alt="Divider" width="100%" /></div>
+        <br />
+
+        <!-- 02. 3-IN-1 AMAZON JUNGLE ARCADE -->
+        <div align="center">
+          <a href="javascript:switchView('arcade');">
+            <img src="assets/arcade-banner.svg" alt="AMAZON JUNGLE ARCADE" width="100%" />
+          </a>
+          <p align="center">
+            🌿 <b>AMAZON JUNGLE ARCADE IS LIVE!</b> Step into the moonlit rainforest with 3 browser mini-games:
+            <br />
+            🐍 <b>Amazon Anaconda (Snake)</b> • 🛶 <b>River Rapids Drift</b> • 🐆 <b>Canopy Wildlife Sprint</b>
+            <br />
+            <sub>🌊 Features procedural Amazon River flow &amp; nocturnal crickets audio synthesized via the Web Audio API!</sub>
+            <br /><br />
+            <a href="javascript:switchView('arcade');">
+              <img src="https://img.shields.io/badge/MISSION_LAUNCH-PLAY_AMAZON_ARCADE-00f59b?style=for-the-badge&logo=retroarch&logoColor=021208&labelColor=042010" alt="Play Game Button" />
+            </a>
+            <a href="./jungle-arcade/README.md" target="_blank">
+              <img src="https://img.shields.io/badge/ARCADE_DOCS-SOURCE_%26_AUDIO-10b981?style=for-the-badge&logo=markdown&logoColor=white&labelColor=042010" alt="Game Docs" />
+            </a>
+          </p>
+        </div>
+
+        <br />
+        <div align="center"><img src="assets/cyber-divider.svg" alt="Divider" width="100%" /></div>
+        <br />
+
+        <!-- 03. PROFILE DASHBOARD & METRICS -->
+        <h2 id="biosphere-telemetry">📊 BIOSPHERE TELEMETRY // GITHUB METRICS</h2>
+        <p>Real-time engineering activity, language footprint, and continuous development velocity in emerald rainforest tones.</p>
+
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tr>
+            <td width="50%" align="center" valign="top">
+              <a href="https://github.com/hyprpranav">
+                <img src="https://github-readme-stats.vercel.app/api?username=hyprpranav&show_icons=true&theme=tokyonight&hide_border=false&border_color=064e3b&bg_color=02140a&title_color=00f59b&text_color=d1fae5&icon_color=a3e635&border_radius=8&count_private=true" alt="Harish Pranav's GitHub Statistics" width="98%" />
+              </a>
+            </td>
+            <td width="50%" align="center" valign="top">
+              <a href="https://github.com/hyprpranav">
+                <img src="https://github-readme-streak-stats.herokuapp.com/?user=hyprpranav&theme=tokyonight&hide_border=false&border_color=064e3b&background=02140a&stroke=064e3b&ring=00f59b&fire=facc15&currStreakLabel=00f59b&border_radius=8" alt="Harish Pranav's Streak Telemetry" width="98%" />
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center" valign="top">
+              <br />
+              <a href="https://github.com/hyprpranav">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hyprpranav&layout=compact&theme=tokyonight&hide_border=false&border_color=064e3b&bg_color=02140a&title_color=00f59b&text_color=d1fae5&icon_color=14b8a6&border_radius=8" alt="Most Used Languages" width="98%" />
+              </a>
+            </td>
+          </tr>
+        </table>
+
+        <br />
+
+        <h3>🐍 AMAZON ANACONDA COMMIT MATRIX // CONTINUOUS CODE CYCLE</h3>
+        <div align="center">
+          <img src="assets/github-contribution-grid-snake.svg" alt="Amazon Anaconda Contribution Grid" width="100%" />
+          <p><sub style="color: #6ee7b7;">🌿 Automated 24h cron synchronization via GitHub Actions <code>.github/workflows/snake.yml</code></sub></p>
+        </div>
+
+        <br />
+        <div align="center"><img src="assets/cyber-divider.svg" alt="Divider" width="100%" /></div>
+        <br />
+
+        <!-- 04. STARTUP SHOWCASE -->
+        <h2>🏢 VENTURE LABS // STARTUP SHOWCASE</h2>
+        <p>Pioneering hardware-software IoT prototypes, student engineering mentorship, and technical upskilling.</p>
+
+        <table width="100%" border="0" cellpadding="8" cellspacing="0">
+          <tr>
+            <!-- PROJIFYRA -->
+            <td width="50%" valign="top">
+              <div align="center"><img src="assets/startup-projifyra.svg" alt="PROJIFYRA" width="100%" /></div>
+              <h3>⚡ PROJIFYRA (Primary Venture)</h3>
+              <p><b>Domain:</b> Project Development, Hardware-Software IoT Integration &amp; Freelancing</p>
+              <p>
+                <b>PROJIFYRA</b> is my flagship engineering initiative providing turnkey IoT prototypes, circuit designs, embedded firmware, and custom web dashboards. We specialize in college-level capstone projects, community-driven innovations, and freelance client engagements across both hardware and software domains.
+              </p>
+              <ul>
+                <li><b>Core Offerings:</b> Hardware + Software IoT Integrated Systems, PCB Design, Firmware</li>
+                <li><b>Clientele:</b> Engineering Students, College Capstone Teams, Early-Stage Innovators</li>
+                <li><b>Operational Status:</b> <code>ACTIVE // ACCEPTING CLIENT PROJECTS</code></li>
+              </ul>
+              <div align="center">
+                <a href="mailto:hyprpranav@gmail.com?subject=PROJIFYRA%20Project%20Inquiry">
+                  <img src="https://img.shields.io/badge/COMMISSION_PROJECT-hyprpranav%40gmail.com-00f59b?style=flat-square&logo=gmail&logoColor=021208" alt="Contact Projifyra" />
+                </a>
+                <a href="tel:+917846937655">
+                  <img src="https://img.shields.io/badge/WHATSAPP-%2B91_78469_37655-25d366?style=flat-square&logo=whatsapp&logoColor=white" alt="Call Projifyra" />
+                </a>
+              </div>
+            </td>
+
+            <!-- AMPORA -->
+            <td width="50%" valign="top">
+              <div align="center"><img src="assets/startup-ampora.svg" alt="AMPORA" width="100%" /></div>
+              <h3>🌱 AMPORA (Secondary Initiative)</h3>
+              <p><b>Domain:</b> Student Technical Upskilling, LinkedIn Mastery &amp; Problem Solving</p>
+              <p>
+                <b>AMPORA</b> was innovated as a peer-to-peer mentorship and skill development initiative within my college network. It equips engineering peers with structured guidance to build strong LinkedIn technical profiles, excel on HackerRank coding challenges, and develop core engineering project competencies.
+              </p>
+              <ul>
+                <li><b>Core Focus:</b> LinkedIn Personal Branding, HackerRank Problem Solving, Career Upskilling</li>
+                <li><b>Target Audience:</b> Engineering Undergrads, Peer Students, Tech Enthusiasts</li>
+                <li><b>Operational Status:</b> <code>STUDENT MENTORSHIP &amp; PEER NETWORK</code></li>
+              </ul>
+              <div align="center">
+                <a href="mailto:hyprpranav@gmail.com?subject=AMPORA%20Mentorship%20Inquiry">
+                  <img src="https://img.shields.io/badge/JOIN_NETWORK-hyprpranav%40gmail.com-facc15?style=flat-square&logo=gmail&logoColor=021208" alt="Contact Ampora" />
+                </a>
+                <a href="https://linkedin.com/in/hyprpranav">
+                  <img src="https://img.shields.io/badge/LINKEDIN-Peer_Mentorship-0077b5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn Ampora" />
+                </a>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+        <br />
+        <div align="center"><img src="assets/cyber-divider.svg" alt="Divider" width="100%" /></div>
+        <br />
+
+        <!-- 05. TECHNICAL STACK & ARSENAL -->
+        <h2>🛠️ TECH ARSENAL // MULTI-TIER SYSTEM STACK</h2>
+
+        <h4 style="margin: 14px 0 8px; color: #00f59b;">💻 01. PROGRAMMING &amp; SYSTEM LANGUAGES</h4>
+        <p>
+          <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C" />
+          <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
+          <img src="https://img.shields.io/badge/EMBEDDED_C-064e3b?style=for-the-badge&logo=microchip&logoColor=00f59b" alt="Embedded C" />
+          <img src="https://img.shields.io/badge/PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+          <img src="https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+          <img src="https://img.shields.io/badge/TYPESCRIPT-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+          <img src="https://img.shields.io/badge/BASH_SHELL-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash" />
+          <img src="https://img.shields.io/badge/RUST-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust" />
+        </p>
+
+        <h4 style="margin: 14px 0 8px; color: #10b981;">⚡ 02. EMBEDDED SYSTEMS &amp; SILICON ARCHITECTURES</h4>
+        <p>
+          <img src="https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP32" />
+          <img src="https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white" alt="STM32" />
+          <img src="https://img.shields.io/badge/ARM_CORTEX-0091BD?style=for-the-badge&logo=arm&logoColor=white" alt="ARM Cortex" />
+          <img src="https://img.shields.io/badge/ARDUINO-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino" />
+          <img src="https://img.shields.io/badge/RASPBERRY_PI-C51A4A?style=for-the-badge&logo=raspberrypi&logoColor=white" alt="Raspberry Pi" />
+          <img src="https://img.shields.io/badge/FREERTOS-008080?style=for-the-badge&logo=c&logoColor=white" alt="FreeRTOS" />
+        </p>
+
+        <h4 style="margin: 14px 0 8px; color: #14b8a6;">📡 03. IoT PROTOCOLS, BUSES &amp; HARDWARE SCHEMATICS</h4>
+        <p>
+          <img src="https://img.shields.io/badge/MQTT-660066?style=for-the-badge&logo=eclipsemosquitto&logoColor=white" alt="MQTT" />
+          <img src="https://img.shields.io/badge/CAN_BUS-004080?style=for-the-badge&logo=audi&logoColor=white" alt="CAN Bus" />
+          <img src="https://img.shields.io/badge/LoRaWAN-0070BA?style=for-the-badge&logo=thethingsnetwork&logoColor=white" alt="LoRaWAN" />
+          <img src="https://img.shields.io/badge/BLE_5.0-0082FC?style=for-the-badge&logo=bluetooth&logoColor=white" alt="BLE" />
+          <img src="https://img.shields.io/badge/I2C_%2F_SPI_%2F_UART-042010?style=for-the-badge&logo=sparkfun&logoColor=00f59b" alt="Buses" />
+          <img src="https://img.shields.io/badge/KiCad_PCB-314CB0?style=for-the-badge&logo=kicad&logoColor=white" alt="KiCad" />
+          <img src="https://img.shields.io/badge/ALTIUM_DESIGN-A5915F?style=for-the-badge&logo=altiumdesigner&logoColor=white" alt="Altium" />
+        </p>
+
+        <br />
+        <div align="center"><img src="assets/cyber-divider.svg" alt="Divider" width="100%" /></div>
+        <br />
+
+        <!-- 06. FEATURED PROJECTS -->
+        <h2>🌿 FEATURED ENGINEERING PROJECTS // IoT ARCHITECTURES</h2>
+
+        <table width="100%" border="0" cellpadding="8" cellspacing="0">
+          <tr>
+            <td width="50%" valign="top">
+              <h3>🌲 01. FloraSense (Forest Biosphere IoT)</h3>
+              <p><img src="https://img.shields.io/badge/STATUS-ACTIVE_FIELD_R%26D-00f59b?style=flat-square" alt="Status" /></p>
+              <p>Deep forest canopy environmental sensing station. Logs forest humidity, soil moisture gradient, river stream turbidity, and acoustic wildlife bio-telemetry over ultra-low-power LoRa mesh nodes powered by energy-harvesting solar capacitors.</p>
+              <p><b>Hardware:</b> ESP32-S3, LoRa SX1262, SHT31, Solar MPPT Harvester</p>
+              <p><b>Software:</b> MicroPython, MQTT, InfluxDB, Leaflet Eco-Map Visualizer</p>
+              <p>🔗 <code>hyprpranav/florasense-canopy-iot</code></p>
+            </td>
+
+            <td width="50%" valign="top">
+              <h3>🌍 02. GroundGuard</h3>
+              <p><img src="https://img.shields.io/badge/STATUS-FIELD_TESTED-00f59b?style=flat-square" alt="Status" /></p>
+              <p>Autonomous geotechnical &amp; seismic early-warning sensor station. Continuous multi-axis vibration analysis, soil liquefaction detection, and tilt telemetry capable of triggering acoustic alarms and broadcast alerts over emergency LoRaWAN mesh networks.</p>
+              <p><b>Hardware:</b> ESP32-S3, ADXL355 High-Res Accelerometer, LoRa SX1262</p>
+              <p><b>Software:</b> MicroPython, MQTT, Node-RED, GeoJSON Mapping API</p>
+              <p>🔗 <code>hyprpranav/groundguard-early-warning</code></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="50%" valign="top">
+              <h3>🛡️ 03. NeoGuard</h3>
+              <p><img src="https://img.shields.io/badge/STATUS-DEPLOYED_LAB-00f59b?style=flat-square" alt="Status" /></p>
+              <p>Smart perimeter surveillance and threat neutralization node. Integrates dual PIR and ultrasonic sensor fusion with edge vision to detect intrusions and broadcast encrypted instant telegram/email telematics with snapshot verification.</p>
+              <p><b>Hardware:</b> Raspberry Pi Zero 2W, ESP32-CAM, Ultrasonic Arrays, GSM/GPRS</p>
+              <p><b>Software:</b> OpenCV Edge Inference, C++, WebSockets, Telegram Bot API</p>
+              <p>🔗 <code>hyprpranav/neoguard-security-system</code></p>
+            </td>
+
+            <td width="50%" valign="top">
+              <h3>💡 04. NeoLuma</h3>
+              <p><img src="https://img.shields.io/badge/STATUS-PILOT_READY-00f59b?style=flat-square" alt="Status" /></p>
+              <p>Intelligent municipal adaptive street-lighting grid. Dynamically modulates luminance based on vehicular traffic density, pedestrian presence, and ambient lux levels, delivering up to 42% energy reduction.</p>
+              <p><b>Hardware:</b> ATmega328P / ESP8266, LDR Lux Sensor, Microwave Doppler Radar</p>
+              <p><b>Software:</b> Embedded C, MQTT Broker, React Admin Portal, Firebase</p>
+              <p>🔗 <code>hyprpranav/neoluma-smart-lighting</code></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="50%" valign="top">
+              <h3>🩺 05. Beltiva</h3>
+              <p><img src="https://img.shields.io/badge/STATUS-FUNCTIONAL_PROTOTYPE-00f59b?style=flat-square" alt="Status" /></p>
+              <p>Ergonomic smart wearable assistive belt engineered for real-time lumbar posture tracking, geriatric fall impact detection, and respiratory rhythm monitoring with BLE transmission to mobile apps.</p>
+              <p><b>Hardware:</b> Nordic nRF52840, MPU-6050 6-DOF IMU, Flexible Strain Sensor</p>
+              <p><b>Software:</b> Zephyr RTOS, BLE GATT Server, Flutter Companion App</p>
+              <p>🔗 <code>hyprpranav/beltiva-smart-wearable</code></p>
+            </td>
+
+            <td width="50%" valign="top">
+              <h3>🚗 06. AutoSense</h3>
+              <p><img src="https://img.shields.io/badge/STATUS-PROTOTYPE_BENCH-00f59b?style=flat-square" alt="Status" /></p>
+              <p>Intelligent vehicular blind-spot radar and collision avoidance auxiliary computer. Combines multi-directional millimeter-wave / ultrasonic proximity sensors with vehicle speed telemetry.</p>
+              <p><b>Hardware:</b> STM32 Nucleo, 24GHz mmWave Radar, CAN Transceiver, OLED HUD</p>
+              <p><b>Software:</b> Embedded C++, FreeRTOS, OBD-II Protocol Interface</p>
+              <p>🔗 <code>hyprpranav/autosense-vehicular-telematics</code></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="50%" valign="top">
+              <h3>🚆 07. Smart Railway Safety System</h3>
+              <p><img src="https://img.shields.io/badge/STATUS-INNOVATION_AWARD-00f59b?style=flat-square" alt="Status" /></p>
+              <p>Automated railway track crack detection, obstruction mitigation, and unmanned level-crossing safety module. Utilizes laser triangulation, IR arrays, and acoustic emission transducers on inspection trolleys.</p>
+              <p><b>Hardware:</b> Arduino Mega / ESP32, Laser Profiler, GPS NEO-6M, GSM SIM800L</p>
+              <p><b>Software:</b> Embedded C, SMS &amp; Cloud Webhook Telemetry, Leaflet GIS Dashboard</p>
+              <p>🔗 <code>hyprpranav/smart-railway-safety-system</code></p>
+            </td>
+
+            <td width="50%" valign="top">
+              <h3>🌱 08. GOBARdhan</h3>
+              <p><img src="https://img.shields.io/badge/STATUS-COMMUNITY_PILOT-00f59b?style=flat-square" alt="Status" /></p>
+              <p>IoT-automated bio-digester monitoring and bio-slurry quality assessment node supporting rural clean energy initiatives. Real-time logging of methane (CH4) concentrations, reactor pH, and pressure.</p>
+              <p><b>Hardware:</b> ESP32, MQ-4 Methane Sensor, Industrial pH Probe, DS18B20</p>
+              <p><b>Software:</b> C++, MQTT, ThingsBoard IoT Cloud, SMS Farmer Advisory</p>
+              <p>🔗 <code>hyprpranav/gobardhan-biogas-iot</code></p>
+            </td>
+          </tr>
+        </table>
+
+        <br />
+        <div align="center"><img src="assets/cyber-divider.svg" alt="Divider" width="100%" /></div>
+        <br />
+
+        <!-- 07. DISPATCH CONTACT -->
+        <h2>📡 DISPATCH TRANSMISSION // GET IN TOUCH</h2>
+        <div align="center">
+          <p>
+            <a href="mailto:hyprpranav@gmail.com">
+              <img src="https://img.shields.io/badge/EMAIL-hyprpranav%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+            </a>
+            <a href="tel:+917846937655">
+              <img src="https://img.shields.io/badge/PHONE_%2F_WHATSAPP-%2B91_78469_37655-25d366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Phone" />
+            </a>
+            <a href="https://linkedin.com/in/hyprpranav">
+              <img src="https://img.shields.io/badge/LINKEDIN-Harish_Pranav_S-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/hyprpranav">
+              <img src="https://img.shields.io/badge/GITHUB-%40hyprpranav-181717?style=for-the-badge&logo=github&logoColor=00f59b" alt="GitHub" />
+            </a>
+          </p>
+          <p style="margin-top: 14px; font-family: monospace; color: #6ee7b7;">
+            <code>📍 HOMETOWN: BATHALAGUNDU, DINDIGUL, TAMIL NADU, INDIA [UTC+05:30]</code>
+            <br />
+            <code>🎓 COLLEGE: M. KUMARASAMY COLLEGE OF ENGINEERING, KARUR (PRE-FINAL YEAR ECE)</code>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Live Arcade Iframe View -->
+    <div id="arcade-view">
+      <iframe id="arcade-frame" src="./jungle-arcade/index.html" title="AMAZON JUNGLE ARCADE"></iframe>
+    </div>
+
+  </main>
+
+  <script>
+    function switchView(mode) {
+      const profileView = document.getElementById('profile-view');
+      const arcadeView = document.getElementById('arcade-view');
+      const tabDesktop = document.getElementById('tab-desktop');
+      const tabMobile = document.getElementById('tab-mobile');
+      const tabArcade = document.getElementById('tab-arcade');
+      const tabCyber = document.getElementById('tab-cyber');
+      const arcadeFrame = document.getElementById('arcade-frame');
+
+      tabDesktop.classList.remove('active');
+      tabMobile.classList.remove('active');
+      tabArcade.classList.remove('active');
+      if (tabCyber) tabCyber.classList.remove('active');
+
+      if (mode === 'desktop') {
+        profileView.style.display = 'block';
+        profileView.classList.remove('mobile-simulator');
+        arcadeView.style.display = 'none';
+        tabDesktop.classList.add('active');
+      } else if (mode === 'mobile') {
+        profileView.style.display = 'block';
+        profileView.classList.add('mobile-simulator');
+        arcadeView.style.display = 'none';
+        tabMobile.classList.add('active');
+      } else if (mode === 'arcade') {
+        profileView.style.display = 'none';
+        arcadeView.style.display = 'block';
+        arcadeFrame.src = './jungle-arcade/index.html';
+        tabArcade.classList.add('active');
+      } else if (mode === 'cyber') {
+        window.location.href = './theme-cyberpunk-backup/preview.html';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AMAZON JUNGLE ARCADE // 3-in-1 Forest Sanctuary</title>
+  <meta name="description" content="3-in-1 Amazon Jungle Arcade by Harish Pranav S (hyprpranav). Features Amazon Anaconda Snake, River Rapids, and Canopy Sprint with peaceful nature audio.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="game-container">
+    <!-- Top Jungle HUD Bar -->
+    <header id="hud-top">
+      <div class="hud-item brand">
+        <span class="hud-leaf">🌿</span> AMAZON ARCADE
+      </div>
+
+      <!-- Game Selector Switcher -->
+      <div class="game-selector">
+        <button id="btn-game-snake" class="game-tab-btn active" onclick="switchGame('snake')">
+          🐍 1. Anaconda
+        </button>
+        <button id="btn-game-river" class="game-tab-btn" onclick="switchGame('river')">
+          🛶 2. River Rapids
+        </button>
+        <button id="btn-game-canopy" class="game-tab-btn" onclick="switchGame('canopy')">
+          🐆 3. Canopy Sprint
+        </button>
+      </div>
+
+      <div class="hud-item score-box">
+        <span class="hud-label">SCORE</span>
+        <span id="score-display">00000</span>
+      </div>
+
+      <div class="hud-item high-score-box">
+        <span class="hud-label">RECORD</span>
+        <span id="hi-score-display">00000</span>
+      </div>
+
+      <div class="hud-item controls-bar">
+        <!-- Peaceful Nature Ambience Toggle -->
+        <button id="nature-sound-btn" class="hud-btn nature-active" title="Toggle Night Insects & River Sound">
+          <span id="nature-sound-icon">🌊</span> AMBIENCE: ON
+        </button>
+        <button id="pause-btn" class="hud-btn" title="Pause Game (P)">
+          ⏸ PAUSE
+        </button>
+      </div>
+    </header>
+
+    <!-- Canvas Viewport -->
+    <div id="canvas-wrapper">
+      <canvas id="game-canvas"></canvas>
+      
+      <!-- Leaf Canopy & Firefly Vignette Overlay -->
+      <div class="canopy-overlay"></div>
+
+      <!-- Start / Menu Overlay -->
+      <div id="menu-overlay" class="overlay active">
+        <div class="menu-card">
+          <div class="nature-badge">🌿 AMAZON BIOSPHERE SUITE</div>
+          <h1 id="menu-game-title" class="emerald-title">AMAZON ANACONDA</h1>
+          <p id="menu-game-desc" class="subtitle">
+            Guide the emerald anaconda across the moonlit Amazon rainforest. Hunt glowing fireflies, avoid collisions with ancient mossy stones and your own body.
+          </p>
+          
+          <div class="instruction-grid">
+            <div class="inst-col">
+              <h3>CONTROLS</h3>
+              <p id="inst-desktop"><span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span> or <span class="key">ARROWS</span> : Steer Anaconda</p>
+              <p><span class="key">P</span> : Pause / Resume</p>
+              <p><span class="key">M</span> : Peaceful Forest Sound Toggle</p>
+            </div>
+            <div class="inst-col">
+              <h3>PEACEFUL AMBIENCE</h3>
+              <p>🌊 Procedural Amazon River current</p>
+              <p>🦗 Nocturnal rainforest crickets &amp; fauna</p>
+              <p>📱 Touch controls available on mobile screens</p>
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button id="start-game-btn" class="nature-button primary">
+              <span class="btn-text">ENTER JUNGLE</span>
+            </button>
+            <a href="../preview.html" class="nature-button secondary">
+              <span class="btn-text">RETURN TO PROFILE</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pause Overlay -->
+      <div id="pause-overlay" class="overlay hidden">
+        <div class="menu-card compact">
+          <h2>SANCTUARY RESTING</h2>
+          <p>Listening to the peaceful river and night insects...</p>
+          <div class="button-group">
+            <button id="resume-btn" class="nature-button primary">RESUME</button>
+            <button id="restart-from-pause-btn" class="nature-button secondary">RESTART</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Over Overlay -->
+      <div id="game-over-overlay" class="overlay hidden">
+        <div class="menu-card">
+          <div class="nature-badge alert">CYCLE COMPLETED</div>
+          <h2 class="alert-title">SANCTUARY FINALE</h2>
+          <div class="final-stats">
+            <div class="stat-box">
+              <div class="stat-label">EXPEDITION SCORE</div>
+              <div id="final-score" class="stat-value">0</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">ALL-TIME BEST</div>
+              <div id="final-hiscore" class="stat-value">0</div>
+            </div>
+          </div>
+          <div id="new-high-score-banner" class="high-score-banner hidden">
+            🏆 NEW EXPEDITION RECORD SECURED! 🏆
+          </div>
+          <div class="button-group">
+            <button id="restart-game-btn" class="nature-button primary">
+              <span class="btn-text">RE-ENTER SANCTUARY</span>
+            </button>
+            <a href="../preview.html" class="nature-button secondary">
+              <span class="btn-text">RETURN TO PROFILE</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Touch Direction Controls (Appears on touch / mobile devices) -->
+      <div id="mobile-dpad" class="mobile-only">
+        <div class="dpad-grid">
+          <button id="dpad-up" class="dpad-btn up">▲</button>
+          <button id="dpad-left" class="dpad-btn left">◄</button>
+          <button id="dpad-down" class="dpad-btn down">▼</button>
+          <button id="dpad-right" class="dpad-btn right">►</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

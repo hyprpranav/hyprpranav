@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>HYPR ARCADE // Quantum Interceptor</title>
+  <meta name="description" content="Retro-futuristic space shooter & hyperloop interceptor game by HYPRPRANAV. Pure HTML5 Canvas & Web Audio API.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="game-container">
+    <!-- Top HUD Bar -->
+    <header id="hud-top">
+      <div class="hud-item brand">
+        <span class="hud-glitch">HYPR</span> ARCADE
+        <span class="hud-ver">v2.4</span>
+      </div>
+      <div class="hud-item score-box">
+        <span class="hud-label">SCORE</span>
+        <span id="score-display">00000</span>
+      </div>
+      <div class="hud-item multiplier-box">
+        <span class="hud-label">COMBO</span>
+        <span id="multiplier-display">x1.0</span>
+      </div>
+      <div class="hud-item high-score-box">
+        <span class="hud-label">HI-SCORE</span>
+        <span id="hi-score-display">00000</span>
+      </div>
+      <div class="hud-item controls-bar">
+        <button id="audio-toggle-btn" class="hud-btn" title="Toggle Audio (M)">
+          <span id="audio-icon">🔊</span> SOUND
+        </button>
+        <button id="pause-btn" class="hud-btn" title="Pause Game (P)">
+          ⏸ PAUSE
+        </button>
+      </div>
+    </header>
+
+    <!-- Canvas viewport -->
+    <div id="canvas-wrapper">
+      <canvas id="game-canvas"></canvas>
+      
+      <!-- Scanline / CRT overlay filter -->
+      <div class="crt-overlay"></div>
+
+      <!-- Health & Energy Status -->
+      <div id="hud-bottom">
+        <div class="shield-meter-wrapper">
+          <span class="meter-label">HULL INTEGRITY</span>
+          <div class="meter-bar">
+            <div id="health-bar" style="width: 100%;"></div>
+          </div>
+        </div>
+        <div class="emp-meter-wrapper">
+          <span class="meter-label">OVERDRIVE EMP [SPACE / DBL-TAP]</span>
+          <div class="meter-bar">
+            <div id="emp-bar" style="width: 100%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start / Menu Overlay -->
+      <div id="menu-overlay" class="overlay active">
+        <div class="menu-card">
+          <div class="cyber-badge">SYSTEM PROTOCOL 01</div>
+          <h1 class="glitch-title" data-text="HYPR INTERCEPTOR">HYPR INTERCEPTOR</h1>
+          <p class="subtitle">Defend the Quantum Hyperloop corridor from rogue drones and anomalies.</p>
+          
+          <div class="instruction-grid">
+            <div class="inst-col">
+              <h3>DESKTOP CONTROLS</h3>
+              <p><span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span> or <span class="key">ARROWS</span> : Flight Control</p>
+              <p><span class="key">SPACE</span> or <span class="key">L-CLICK</span> : Plasma Cannons</p>
+              <p><span class="key">E</span> or <span class="key">X</span> : Discharge Quantum EMP</p>
+              <p><span class="key">P</span> : Pause / Resume</p>
+              <p><span class="key">M</span> : Mute Audio</p>
+            </div>
+            <div class="inst-col">
+              <h3>MOBILE CONTROLS</h3>
+              <p>Drag or use Virtual Joystick to steer ship</p>
+              <p>Auto-cannons active on touch</p>
+              <p>Double-tap screen or EMP button for Overdrive</p>
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button id="start-game-btn" class="cyber-button primary">
+              <span class="btn-text">INITIALIZE MISSION</span>
+              <span class="btn-glare"></span>
+            </button>
+            <a href="../README.md" class="cyber-button secondary">
+              <span class="btn-text">RETURN TO PROFILE</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pause Overlay -->
+      <div id="pause-overlay" class="overlay hidden">
+        <div class="menu-card compact">
+          <h2>SYSTEM PAUSED</h2>
+          <p>Tactical data stream on standby.</p>
+          <div class="button-group">
+            <button id="resume-btn" class="cyber-button primary">RESUME FLIGHT</button>
+            <button id="restart-from-pause-btn" class="cyber-button secondary">RESTART</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Over Overlay -->
+      <div id="game-over-overlay" class="overlay hidden">
+        <div class="menu-card">
+          <div class="cyber-badge alert">HULL BREACH DETECTED</div>
+          <h2 class="alert-title">MISSION TERMINATED</h2>
+          <div class="final-stats">
+            <div class="stat-box">
+              <div class="stat-label">FINAL SCORE</div>
+              <div id="final-score" class="stat-value">0</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">MAX COMBO</div>
+              <div id="final-combo" class="stat-value">x1.0</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">ELIMINATIONS</div>
+              <div id="final-kills" class="stat-value">0</div>
+            </div>
+          </div>
+          <div id="new-high-score-banner" class="high-score-banner hidden">
+            🏆 NEW HIGH RECORD SECURED! 🏆
+          </div>
+          <div class="button-group">
+            <button id="restart-game-btn" class="cyber-button primary">
+              <span class="btn-text">RELAUNCH POD</span>
+              <span class="btn-glare"></span>
+            </button>
+            <a href="../README.md" class="cyber-button secondary">
+              <span class="btn-text">RETURN TO PROFILE</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Touch Controls HUD -->
+      <div id="mobile-controls" class="mobile-only">
+        <div id="touch-joystick-zone">
+          <div id="joystick-base">
+            <div id="joystick-stick"></div>
+          </div>
+        </div>
+        <div id="touch-buttons-zone">
+          <button id="touch-emp-btn" class="touch-action-btn emp">EMP</button>
+          <button id="touch-fire-btn" class="touch-action-btn fire">FIRE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

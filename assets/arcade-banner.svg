@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 170" width="100%" height="170">
+  <defs>
+    <linearGradient id="jungleArcBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020e07" />
+      <stop offset="50%" stop-color="#062314" />
+      <stop offset="100%" stop-color="#021209" />
+    </linearGradient>
+
+    <linearGradient id="emeraldGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f59b" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#facc15" />
+    </linearGradient>
+
+    <filter id="arcBioGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes slitherPulse {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-4px); }
+      }
+      .snake-sprite { animation: slitherPulse 2.4s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="896" height="166" rx="14" fill="url(#jungleArcBg)" stroke="#10b981" stroke-width="1.8" stroke-opacity="0.8" />
+
+  <!-- Tropical Vines / Leaves in Corners -->
+  <path d="M 12 32 Q 35 12, 12 12 Q 12 32, 32 12" stroke="#00f59b" stroke-width="2" fill="none" />
+  <path d="M 888 32 Q 865 12, 888 12 Q 888 32, 868 12" stroke="#a3e635" stroke-width="2" fill="none" />
+  <path d="M 12 138 Q 35 158, 12 158 Q 12 138, 32 158" stroke="#a3e635" stroke-width="2" fill="none" />
+  <path d="M 888 138 Q 865 158, 888 158 Q 888 138, 868 158" stroke="#00f59b" stroke-width="2" fill="none" />
+
+  <!-- Amazon Anaconda Snake Vector Icon -->
+  <g transform="translate(85, 85)" class="snake-sprite">
+    <!-- Snake Body Waves -->
+    <path d="M -45 10 Q -30 -15, -15 8 Q 0 -15, 15 8 Q 30 -10, 42 0" fill="none" stroke="#10b981" stroke-width="7" stroke-linecap="round" />
+    <path d="M -45 10 Q -30 -15, -15 8 Q 0 -15, 15 8 Q 30 -10, 42 0" fill="none" stroke="#00f59b" stroke-width="3" stroke-linecap="round" filter="url(#arcBioGlow)" />
+    <!-- Snake Head -->
+    <ellipse cx="46" cy="0" rx="9" ry="7" fill="#00f59b" filter="url(#arcBioGlow)" />
+    <circle cx="48" cy="-3" r="2" fill="#02140a" />
+    <!-- Glowing Firefly Fruit in front of Snake -->
+    <circle cx="70" cy="0" r="4" fill="#facc15" filter="url(#arcBioGlow)">
+      <animate attributeName="r" values="3.5;5;3.5" dur="1.2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Title & Info (Strictly constrained within x=185 to x=640 to prevent any overlap) -->
+  <g transform="translate(190, 48)">
+    <rect x="0" y="-18" width="160" height="20" rx="4" fill="#059669" fill-opacity="0.3" stroke="#10b981" stroke-width="1" />
+    <text x="80" y="-4" fill="#6ee7b7" font-family="'Courier New', monospace" font-size="10.5" font-weight="bold" text-anchor="middle" letter-spacing="1">3-IN-1 JUNGLE SUITE</text>
+    
+    <text x="0" y="28" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="30" fill="url(#emeraldGold)" filter="url(#arcBioGlow)" letter-spacing="2.5">AMAZON ARCADE</text>
+    
+    <!-- Clean, non-overlapping multi-line description -->
+    <text x="0" y="52" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="12.5" fill="#f0fdf4" letter-spacing="0.5">
+      Amazon Anaconda Snake • River Rapids Runner • Canopy Wildlife Sprint
+    </text>
+    <text x="0" y="70" font-family="'Segoe UI', sans-serif" font-weight="400" font-size="11.5" fill="#a7f3d0" letter-spacing="0.5">
+      Pure HTML5 Canvas Engine • Real-time Procedural River &amp; Night Cricket Audio
+    </text>
+  </g>
+
+  <!-- Call-to-Action Play Button (Clearance guaranteed) -->
+  <g transform="translate(760, 85)">
+    <rect x="-85" y="-26" width="170" height="52" rx="26" fill="#042f2e" stroke="url(#emeraldGold)" stroke-width="2" filter="url(#arcBioGlow)" />
+    <polygon points="-45,-7 -45,7 -32,0" fill="#00f59b" />
+    <text x="12" y="6" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-weight="800" font-size="14" text-anchor="middle" letter-spacing="1.5">PLAY NOW</text>
+    <text x="62" y="6" fill="#00f59b" font-family="sans-serif" font-weight="bold" font-size="15">→</text>
+  </g>
+</svg>

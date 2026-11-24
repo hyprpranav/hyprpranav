@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 140" width="100%" height="140">
+  <defs>
+    <linearGradient id="projBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="100%" stop-color="#070a14" />
+    </linearGradient>
+    <linearGradient id="projGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="100%" stop-color="#00b4d8" />
+    </linearGradient>
+    <filter id="pGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="2" y="2" width="446" height="136" rx="12" fill="url(#projBg)" stroke="#00f5d4" stroke-width="1.5" stroke-opacity="0.6" />
+  
+  <!-- Tech Accent Lines -->
+  <line x1="20" y1="20" x2="60" y2="20" stroke="#00f5d4" stroke-width="2" />
+  <circle cx="60" cy="20" r="2" fill="#00f5d4" />
+
+  <!-- Logo Icon -->
+  <g transform="translate(48, 70)">
+    <polygon points="0,-24 20,-12 20,12 0,24 -20,12 -20,-12" fill="#0f172a" stroke="url(#projGrad)" stroke-width="2" filter="url(#pGlow)" />
+    <path d="M -8 -10 L 8 0 L -8 10" fill="none" stroke="#00f5d4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Typography with clean, non-overlapping spacing -->
+  <g transform="translate(88, 48)">
+    <text x="0" y="0" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="20" fill="#ffffff" letter-spacing="2.5">PROJIFYRA</text>
+    <!-- Badge cleanly positioned with 20px clearance -->
+    <rect x="165" y="-14" width="70" height="18" rx="4" fill="#00f5d4" fill-opacity="0.15" stroke="#00f5d4" stroke-width="0.8" />
+    <text x="200" y="-1" font-family="monospace" font-size="9" font-weight="bold" fill="#00f5d4" text-anchor="middle">ACTIVE</text>
+    
+    <text x="0" y="25" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#00f5d4">Engineering Solutions &amp; Mentorship</text>
+    <text x="0" y="45" font-family="'Segoe UI', sans-serif" font-size="10.5" fill="#94a3b8">Hardware-Software IoT • Prototyping • Freelance</text>
+  </g>
+</svg>

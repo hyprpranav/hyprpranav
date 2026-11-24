@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 280" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070e" />
+      <stop offset="50%" stop-color="#0a0f1d" />
+      <stop offset="100%" stop-color="#04060b" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="cyberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5d4">
+        <animate attributeName="stop-color" values="#00f5d4;#00b4d8;#a855f7;#00f5d4" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#00b4d8">
+        <animate attributeName="stop-color" values="#00b4d8;#a855f7;#00f5d4;#00b4d8" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#a855f7">
+        <animate attributeName="stop-color" values="#a855f7;#00f5d4;#00b4d8;#a855f7" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="pulseCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5d4" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#00f5d4" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#00f5d4" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="deepGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="16" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#14213d" stroke-width="0.75" stroke-opacity="0.4" />
+      <circle cx="0" cy="0" r="1.5" fill="#00b4d8" fill-opacity="0.3" />
+    </pattern>
+
+    <style>
+      @keyframes radarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes blinkPulse {
+        0%, 100% { opacity: 0.9; }
+        50% { opacity: 0.3; }
+      }
+      @keyframes dataStream {
+        0% { stroke-dashoffset: 600; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes glowPulse {
+        0%, 100% { filter: drop-shadow(0 0 8px rgba(0, 245, 212, 0.6)); }
+        50% { filter: drop-shadow(0 0 16px rgba(168, 85, 247, 0.8)); }
+      }
+      .hud-title {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'SF Pro Display', Roboto, 'Ubuntu', sans-serif;
+        font-weight: 900;
+        letter-spacing: 7px;
+        fill: #ffffff;
+      }
+      .hud-subtitle {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 600;
+        letter-spacing: 3px;
+        fill: #00f5d4;
+      }
+      .hud-tag {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      }
+      .scanline {
+        animation: dataStream 6s linear infinite;
+        stroke-dasharray: 60 140;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Plate & Border -->
+  <rect x="0" y="0" width="950" height="280" rx="16" fill="url(#bgGrad)" stroke="#1a2744" stroke-width="1.5" />
+  <rect x="4" y="4" width="942" height="272" rx="12" fill="url(#cyberGrid)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="120" cy="80" r="130" fill="#7928ca" fill-opacity="0.12" filter="url(#deepGlow)" />
+  <circle cx="830" cy="200" r="140" fill="#00f5d4" fill-opacity="0.1" filter="url(#deepGlow)" />
+  <circle cx="475" cy="140" r="100" fill="#00b4d8" fill-opacity="0.08" filter="url(#deepGlow)" />
+
+  <!-- Corner Brackets (Futuristic HUD) -->
+  <g stroke="#00f5d4" stroke-width="2.5" fill="none" opacity="0.85">
+    <path d="M 24 50 L 24 24 L 50 24" />
+    <path d="M 926 50 L 926 24 L 900 24" />
+    <path d="M 24 230 L 24 256 L 50 256" />
+    <path d="M 926 230 L 926 256 L 900 256" />
+  </g>
+
+  <!-- Top Status Bar -->
+  <g transform="translate(40, 36)">
+    <circle cx="0" cy="0" r="4" fill="#00f5d4">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <text x="14" y="4" fill="#64748b" class="hud-tag">STATUS: <tspan fill="#00f5d4">ONLINE // SYS_READY</tspan></text>
+    <text x="710" y="4" fill="#64748b" class="hud-tag">LOC: <tspan fill="#a855f7">HYPERSPACE NODE</tspan></text>
+  </g>
+
+  <!-- Circuit Traces / Animated Bus -->
+  <g fill="none" stroke-width="1.5">
+    <path d="M 30 140 L 160 140 L 200 180 L 320 180" stroke="#1e293b" />
+    <path d="M 30 140 L 160 140 L 200 180 L 320 180" stroke="url(#cyberGrad)" class="scanline" />
+    
+    <path d="M 920 140 L 790 140 L 750 100 L 630 100" stroke="#1e293b" />
+    <path d="M 920 140 L 790 140 L 750 100 L 630 100" stroke="url(#cyberGrad)" class="scanline" style="animation-duration: 4.5s;" />
+
+    <circle cx="320" cy="180" r="3" fill="#00f5d4" />
+    <circle cx="630" cy="100" r="3" fill="#a855f7" />
+  </g>
+
+  <!-- Central Radar / Hyperloop Core Ring -->
+  <g transform="translate(475, 125)">
+    <!-- Outer dashed tech ring -->
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="8 6" />
+    <circle cx="0" cy="0" r="95" fill="none" stroke="#2a3c5a" stroke-width="1.2" stroke-dasharray="16 20" />
+    <!-- Rotating radar arc -->
+    <g style="transform-origin: 0 0; animation: radarSweep 10s linear infinite;">
+      <path d="M 0 0 L 88 0 A 88 88 0 0 1 0 88 Z" fill="url(#pulseCyan)" opacity="0.35" />
+      <line x1="0" y1="0" x2="88" y2="0" stroke="#00f5d4" stroke-width="1.5" opacity="0.8" />
+    </g>
+    <!-- Geometric concentric rings -->
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#00b4d8" stroke-width="1" opacity="0.4" />
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#a855f7" stroke-width="1" opacity="0.3" stroke-dasharray="4 4" />
+  </g>
+
+  <!-- Main Center Header Identity -->
+  <g transform="translate(475, 122)" text-anchor="middle">
+    <!-- Back Glow -->
+    <text x="0" y="0" font-size="52" class="hud-title" fill="url(#cyberGrad)" filter="url(#deepGlow)" opacity="0.7">HYPRPRANAV</text>
+    <!-- Foreground Text -->
+    <text x="0" y="0" font-size="52" class="hud-title" fill="#ffffff" filter="url(#neonGlow)">HYPRPRANAV</text>
+    
+    <!-- Subtitle Tech Stream -->
+    <text x="0" y="32" font-size="12" class="hud-subtitle" fill="#00f5d4">
+      [ HARDWARE ARCHITECT &amp; EMBEDDED SYSTEMS ENGINEER ]
+    </text>
+  </g>
+
+  <!-- Futuristic Badges / Telemetry Chips -->
+  <g transform="translate(475, 204)" text-anchor="middle">
+    <!-- Chip 1: ECE -->
+    <g transform="translate(-250, 0)">
+      <rect x="-85" y="-14" width="170" height="28" rx="6" fill="#0f172a" stroke="#00f5d4" stroke-width="1" stroke-opacity="0.7" />
+      <circle cx="-65" cy="0" r="3" fill="#00f5d4" />
+      <text x="5" y="4.5" fill="#e2e8f0" class="hud-tag" font-size="10.5">ECE SCHOLAR</text>
+    </g>
+
+    <!-- Chip 2: EMBEDDED & IOT -->
+    <g transform="translate(-80, 0)">
+      <rect x="-75" y="-14" width="150" height="28" rx="6" fill="#0f172a" stroke="#00b4d8" stroke-width="1" stroke-opacity="0.7" />
+      <circle cx="-55" cy="0" r="3" fill="#00b4d8" />
+      <text x="6" y="4.5" fill="#e2e8f0" class="hud-tag" font-size="10.5">EMBEDDED IoT</text>
+    </g>
+
+    <!-- Chip 3: HYPERLOOP -->
+    <g transform="translate(90, 0)">
+      <rect x="-80" y="-14" width="160" height="28" rx="6" fill="#0f172a" stroke="#a855f7" stroke-width="1" stroke-opacity="0.7" />
+      <circle cx="-60" cy="0" r="3" fill="#a855f7" />
+      <text x="6" y="4.5" fill="#e2e8f0" class="hud-tag" font-size="10.5">HYPERLOOP R&amp;D</text>
+    </g>
+
+    <!-- Chip 4: EV BMS -->
+    <g transform="translate(255, 0)">
+      <rect x="-75" y="-14" width="150" height="28" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.7" />
+      <circle cx="-55" cy="0" r="3" fill="#38bdf8" />
+      <text x="6" y="4.5" fill="#e2e8f0" class="hud-tag" font-size="10.5">AMPORA BMS</text>
+    </g>
+  </g>
+
+  <!-- Bottom Tech Metrics & Frequency Line -->
+  <g transform="translate(475, 250)">
+    <line x1="-400" y1="0" x2="400" y2="0" stroke="#1e293b" stroke-width="1" />
+    <line x1="-120" y1="0" x2="120" y2="0" stroke="url(#cyberGrad)" stroke-width="2" filter="url(#neonGlow)" />
+    <!-- Ticks -->
+    <path d="M -300 -4 L -300 4 M -200 -3 L -200 3 M -100 -3 L -100 3 M 0 -5 L 0 5 M 100 -3 L 100 3 M 200 -3 L 200 3 M 300 -4 L 300 4" stroke="#00b4d8" stroke-width="1" opacity="0.6" />
+  </g>
+</svg>

@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 290" width="100%" height="100%">
+  <defs>
+    <!-- Jungle Night Gradients -->
+    <linearGradient id="forestNightBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020d06" />
+      <stop offset="45%" stop-color="#062112" />
+      <stop offset="75%" stop-color="#03160b" />
+      <stop offset="100%" stop-color="#010804" />
+    </linearGradient>
+
+    <!-- Emerald & River Teal Gradient -->
+    <linearGradient id="emeraldRiverGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981">
+        <animate attributeName="stop-color" values="#10b981;#00f59b;#14b8a6;#10b981" dur="7s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#00f59b">
+        <animate attributeName="stop-color" values="#00f59b;#14b8a6;#a3e635;#00f59b" dur="7s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#14b8a6">
+        <animate attributeName="stop-color" values="#14b8a6;#a3e635;#10b981;#14b8a6" dur="7s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- River Water Stream Gradient -->
+    <linearGradient id="riverWater" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#00f59b" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#042f2e" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Bioluminescent Glow Filter -->
+    <filter id="bioGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b1" />
+      <feGaussianBlur stdDeviation="8" result="b2" />
+      <feMerge>
+        <feMergeNode in="b2" />
+        <feMergeNode in="b1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Subtle Pattern for Forest Mist / Canopy -->
+    <pattern id="leafGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 C 45 15, 45 45, 30 60 C 15 45, 15 15, 30 0 Z" fill="none" stroke="#064e3b" stroke-width="0.75" stroke-opacity="0.2" />
+    </pattern>
+
+    <style>
+      @keyframes floatFirefly1 {
+        0%, 100% { transform: translate(0, 0); opacity: 0.2; }
+        50% { transform: translate(25px, -18px); opacity: 0.95; }
+      }
+      @keyframes floatFirefly2 {
+        0%, 100% { transform: translate(0, 0); opacity: 0.85; }
+        50% { transform: translate(-30px, -24px); opacity: 0.25; }
+      }
+      @keyframes floatFirefly3 {
+        0%, 100% { transform: translate(0, 0); opacity: 0.3; }
+        50% { transform: translate(20px, 15px); opacity: 1; }
+      }
+      @keyframes riverFlow {
+        0% { stroke-dashoffset: 400; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes pulseAura {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 1; }
+      }
+      .firefly1 { animation: floatFirefly1 5s ease-in-out infinite; }
+      .firefly2 { animation: floatFirefly2 6.5s ease-in-out infinite; }
+      .firefly3 { animation: floatFirefly3 4.2s ease-in-out infinite; }
+      .river-ripple {
+        stroke-dasharray: 80 120;
+        animation: riverFlow 9s linear infinite;
+      }
+      .forest-title {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        font-weight: 900;
+        letter-spacing: 5px;
+      }
+      .forest-sub {
+        font-family: 'Courier New', monospace;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Rainforest Frame -->
+  <rect x="0" y="0" width="950" height="290" rx="18" fill="url(#forestNightBg)" stroke="#064e3b" stroke-width="1.8" />
+  <rect x="4" y="4" width="942" height="282" rx="14" fill="url(#leafGrid)" />
+
+  <!-- Ambient Jungle Moonlight / Bioluminescent Pools -->
+  <circle cx="140" cy="70" r="140" fill="#047857" fill-opacity="0.18" filter="url(#bioGlow)" />
+  <circle cx="810" cy="220" r="150" fill="#00f59b" fill-opacity="0.12" filter="url(#bioGlow)" />
+  <circle cx="475" cy="150" r="120" fill="#14b8a6" fill-opacity="0.1" filter="url(#bioGlow)" />
+
+  <!-- Flowing Amazon River Path across the bottom -->
+  <path d="M 0 240 Q 240 210, 480 245 T 950 230 L 950 290 L 0 290 Z" fill="url(#riverWater)" />
+  <path d="M 0 245 Q 240 215, 480 250 T 950 235" fill="none" stroke="#00f59b" stroke-width="1.5" opacity="0.6" class="river-ripple" />
+  <path d="M 0 258 Q 260 228, 510 262 T 950 248" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.4" class="river-ripple" style="animation-duration: 6s;" />
+
+  <!-- Tropical Leaf Silhouettes (Corner Flourishes) -->
+  <!-- Top Left Leaves -->
+  <g fill="#064e3b" fill-opacity="0.65" stroke="#10b981" stroke-width="1">
+    <path d="M 12 12 Q 70 25, 95 75 Q 50 85, 12 12 Z" />
+    <path d="M 12 12 Q 40 65, 55 125 Q 25 110, 12 12 Z" />
+    <path d="M 12 12 Q 95 35, 140 30 Q 95 65, 12 12 Z" opacity="0.4" />
+  </g>
+
+  <!-- Top Right Leaves -->
+  <g fill="#064e3b" fill-opacity="0.65" stroke="#00f59b" stroke-width="1">
+    <path d="M 938 12 Q 880 25, 855 75 Q 900 85, 938 12 Z" />
+    <path d="M 938 12 Q 910 65, 895 125 Q 925 110, 938 12 Z" />
+    <path d="M 938 12 Q 855 35, 810 30 Q 855 65, 938 12 Z" opacity="0.4" />
+  </g>
+
+  <!-- Status Bar / Location Header -->
+  <g transform="translate(45, 34)">
+    <circle cx="0" cy="0" r="4.5" fill="#00f59b">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="14" y="4" fill="#a7f3d0" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">
+      AMAZON BIOSPHERE // <tspan fill="#34d399">SYSTEMS ACTIVE</tspan>
+    </text>
+    <text x="690" y="4" fill="#6ee7b7" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600" letter-spacing="1">
+      TAMIL NADU, IN • <tspan fill="#00f59b">UTC+05:30</tspan>
+    </text>
+  </g>
+
+  <!-- Glowing Fireflies (Drifting Animated Nodes) -->
+  <g class="firefly1" transform="translate(180, 110)">
+    <circle cx="0" cy="0" r="3" fill="#a3e635" filter="url(#bioGlow)" />
+  </g>
+  <g class="firefly2" transform="translate(780, 90)">
+    <circle cx="0" cy="0" r="3.5" fill="#facc15" filter="url(#bioGlow)" />
+  </g>
+  <g class="firefly3" transform="translate(320, 190)">
+    <circle cx="0" cy="0" r="2.5" fill="#00f59b" filter="url(#bioGlow)" />
+  </g>
+  <g class="firefly1" transform="translate(840, 175)">
+    <circle cx="0" cy="0" r="2.5" fill="#a3e635" filter="url(#bioGlow)" />
+  </g>
+  <g class="firefly2" transform="translate(130, 210)">
+    <circle cx="0" cy="0" r="3" fill="#34d399" filter="url(#bioGlow)" />
+  </g>
+
+  <!-- Center Identity Branding: HARISH PRANAV S -->
+  <g transform="translate(475, 118)" text-anchor="middle">
+    <!-- Ambient Green Glow Behind Name -->
+    <text x="0" y="0" font-size="44" class="forest-title" fill="url(#emeraldRiverGrad)" filter="url(#bioGlow)" opacity="0.6">
+      HARISH PRANAV S
+    </text>
+    <!-- Foreground Text -->
+    <text x="0" y="0" font-size="44" class="forest-title" fill="#ffffff">
+      HARISH PRANAV S
+    </text>
+
+    <!-- Handle & Academic Affiliation -->
+    <g transform="translate(0, 26)">
+      <rect x="-105" y="-12" width="210" height="22" rx="11" fill="#064e3b" fill-opacity="0.5" stroke="#10b981" stroke-width="1" />
+      <text x="0" y="3" fill="#34d399" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700" letter-spacing="2">
+        @hyprpranav // ECE SCHOLAR
+      </text>
+    </g>
+
+    <!-- Subtitle: Core Disciplines -->
+    <text x="0" y="58" font-size="12" class="forest-sub" fill="#6ee7b7">
+      [ EMBEDDED SYSTEMS • IoT ARCHITECT • HARDWARE &amp; SOFTWARE R&amp;D ]
+    </text>
+
+    <!-- College Tagline -->
+    <text x="0" y="78" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="500" fill="#93c5fd" letter-spacing="1">
+      M. Kumarasamy College of Engineering, Karur • Pre-Final Year B.E. ECE
+    </text>
+  </g>
+
+  <!-- Telemetry Nature Badges -->
+  <g transform="translate(475, 238)" text-anchor="middle">
+    <!-- Chip 1: PROJIFYRA -->
+    <g transform="translate(-270, 0)">
+      <rect x="-85" y="-13" width="170" height="26" rx="6" fill="#042f2e" stroke="#10b981" stroke-width="1" />
+      <circle cx="-68" cy="0" r="3" fill="#00f59b" />
+      <text x="5" y="4.5" fill="#f0fdf4" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="10.5" letter-spacing="1">PROJIFYRA LEAD</text>
+    </g>
+
+    <!-- Chip 2: EMBEDDED IoT -->
+    <g transform="translate(-90, 0)">
+      <rect x="-80" y="-13" width="160" height="26" rx="6" fill="#042f2e" stroke="#00f59b" stroke-width="1" />
+      <circle cx="-63" cy="0" r="3" fill="#00f59b" />
+      <text x="6" y="4.5" fill="#f0fdf4" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="10.5" letter-spacing="1">EMBEDDED IoT</text>
+    </g>
+
+    <!-- Chip 3: AMPORA -->
+    <g transform="translate(90, 0)">
+      <rect x="-80" y="-13" width="160" height="26" rx="6" fill="#042f2e" stroke="#14b8a6" stroke-width="1" />
+      <circle cx="-63" cy="0" r="3" fill="#14b8a6" />
+      <text x="6" y="4.5" fill="#f0fdf4" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="10.5" letter-spacing="1">AMPORA MENTOR</text>
+    </g>
+
+    <!-- Chip 4: HOMETOWN -->
+    <g transform="translate(270, 0)">
+      <rect x="-85" y="-13" width="170" height="26" rx="6" fill="#042f2e" stroke="#a3e635" stroke-width="1" />
+      <circle cx="-68" cy="0" r="3" fill="#a3e635" />
+      <text x="5" y="4.5" fill="#f0fdf4" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="10.5" letter-spacing="1">BATHALAGUNDU, TN</text>
+    </g>
+  </g>
+</svg>
