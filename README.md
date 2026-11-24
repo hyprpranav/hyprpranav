@@ -69,7 +69,7 @@
 <!-- ========================================== -->
 <div align="center" id="-jungle-arcade">
 
-  <a href="./jungle-arcade/index.html">
+  <a href="https://htmlpreview.github.io/?https://github.com/hyprpranav/hyprpranav/blob/main/jungle-arcade/index.html" target="_blank">
     <img src="assets/arcade-banner.svg" alt="AMAZON JUNGLE ARCADE // 3-in-1 Nature Sanctuary" width="100%" />
   </a>
 
@@ -80,11 +80,14 @@
     <br />
     <sub>🌊 Features procedural Amazon River flow &amp; nocturnal crickets audio synthesized via the Web Audio API!</sub>
     <br /><br />
-    <a href="./jungle-arcade/index.html">
-      <img src="https://img.shields.io/badge/MISSION_LAUNCH-PLAY_AMAZON_ARCADE-00f59b?style=for-the-badge&logo=retroarch&logoColor=021208&labelColor=042010" alt="Play Game Button" />
+    <a href="https://htmlpreview.github.io/?https://github.com/hyprpranav/hyprpranav/blob/main/jungle-arcade/index.html" target="_blank">
+      <img src="https://img.shields.io/badge/PLAY_NOW-LAUNCH_AMAZON_ARCADE-00f59b?style=for-the-badge&logo=retroarch&logoColor=021208&labelColor=042010" alt="Play Game Button" />
     </a>
-    <a href="./jungle-arcade/README.md">
-      <img src="https://img.shields.io/badge/ARCADE_DOCS-SOURCE_%26_AUDIO-10b981?style=for-the-badge&logo=markdown&logoColor=white&labelColor=042010" alt="Game Docs" />
+    <a href="https://hyprpranav.github.io/hyprpranav/" target="_blank">
+      <img src="https://img.shields.io/badge/PAGES_MIRROR-GITHUB_PAGES-10b981?style=for-the-badge&logo=github&logoColor=white&labelColor=042010" alt="GitHub Pages Mirror" />
+    </a>
+    <a href="https://github.com/hyprpranav/hyprpranav/tree/main/jungle-arcade">
+      <img src="https://img.shields.io/badge/SOURCE-VIEW_CODE-14b8a6?style=for-the-badge&logo=markdown&logoColor=white&labelColor=042010" alt="Game Source" />
     </a>
   </p>
 
@@ -162,62 +165,11 @@
 
 <div align="center">
   <p>Pioneering hardware-software IoT prototypes, student engineering mentorship, and technical upskilling.</p>
-
-  <table width="100%" border="0" cellpadding="8" cellspacing="0">
-    <tr>
-      <!-- PROJIFYRA (PRIMARY STARTUP) -->
-      <td width="50%" valign="top">
-        <div align="center">
-          <img src="assets/startup-projifyra.svg" alt="PROJIFYRA" width="100%" />
-        </div>
-        <h3>⚡ PROJIFYRA (Primary Venture)</h3>
-        <p><b>Domain:</b> Project Development, Hardware-Software IoT Integration &amp; Freelancing</p>
-        <p>
-          <b>PROJIFYRA</b> is my flagship engineering initiative providing turnkey IoT prototypes, circuit designs, embedded firmware, and custom web dashboards. We specialize in college-level capstone projects, community-driven innovations, and freelance client engagements across both hardware and software domains.
-        </p>
-        <ul>
-          <li><b>Core Offerings:</b> Hardware + Software IoT Integrated Systems, PCB Design, Firmware</li>
-          <li><b>Clientele:</b> Engineering Students, College Capstone Teams, Early-Stage Innovators</li>
-          <li><b>Operational Status:</b> <code>ACTIVE // ACCEPTING CLIENT PROJECTS</code></li>
-        </ul>
-        <div align="center">
-          <a href="mailto:hyprpranav@gmail.com?subject=PROJIFYRA%20Project%20Inquiry">
-            <img src="https://img.shields.io/badge/COMMISSION_PROJECT-hyprpranav%40gmail.com-00f59b?style=flat-square&logo=gmail&logoColor=021208" alt="Contact Projifyra" />
-          </a>
-          <a href="tel:+917846937655">
-            <img src="https://img.shields.io/badge/WHATSAPP-%2B91_78469_37655-25d366?style=flat-square&logo=whatsapp&logoColor=white" alt="Call Projifyra" />
-          </a>
-        </div>
-      </td>
-
-      <!-- AMPORA (SECONDARY VENTURE) -->
-      <td width="50%" valign="top">
-        <div align="center">
-          <img src="assets/startup-ampora.svg" alt="AMPORA" width="100%" />
-        </div>
-        <h3>🌱 AMPORA (Secondary Initiative)</h3>
-        <p><b>Domain:</b> Student Technical Upskilling, LinkedIn Mastery &amp; Problem Solving</p>
-        <p>
-          <b>AMPORA</b> was innovated as a peer-to-peer mentorship and skill development initiative within my college network. It equips engineering peers with structured guidance to build strong LinkedIn technical profiles, excel on HackerRank coding challenges, and develop core engineering project competencies.
-        </p>
-        <ul>
-          <li><b>Core Focus:</b> LinkedIn Personal Branding, HackerRank Problem Solving, Career Upskilling</li>
-          <li><b>Target Audience:</b> Engineering Undergrads, Peer Students, Tech Enthusiasts</li>
-          <li><b>Operational Status:</b> <code>STUDENT MENTORSHIP &amp; PEER NETWORK</code></li>
-        </ul>
-        <div align="center">
-          <a href="mailto:hyprpranav@gmail.com?subject=AMPORA%20Mentorship%20Inquiry">
-            <img src="https://img.shields.io/badge/JOIN_NETWORK-hyprpranav%40gmail.com-facc15?style=flat-square&logo=gmail&logoColor=021208" alt="Contact Ampora" />
-          </a>
-          <a href="https://linkedin.com/in/hyprpranav">
-            <img src="https://img.shields.io/badge/LINKEDIN-Peer_Mentorship-0077b5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn Ampora" />
-          </a>
-        </div>
-      </td>
-    </tr>
-  </table>
-
 </div>
+
+| <div align="center"><img src="assets/startup-projifyra.svg" width="100%" /></div> | <div align="center"><img src="assets/startup-ampora.svg" width="100%" /></div> |
+| :--- | :--- |
+| **⚡ PROJIFYRA (Primary Venture)**<br>**Domain:** Project Development, IoT Integration &amp; Freelancing<br><br><b>PROJIFYRA</b> is my flagship engineering initiative providing turnkey IoT prototypes, circuit designs, embedded firmware, and custom web dashboards for college capstone teams, community innovations, and freelance client engagements across both hardware and software domains.<br><br>• **Core Offerings:** Hardware + Software IoT Integrated Systems, PCB Design, Firmware<br>• **Clientele:** Engineering Students, College Capstone Teams, Early-Stage Innovators<br>• **Operational Status:** `ACTIVE // ACCEPTING CLIENT PROJECTS`<br><br><div align="center"><a href="mailto:hyprpranav@gmail.com?subject=PROJIFYRA%20Project%20Inquiry"><img src="https://img.shields.io/badge/COMMISSION_PROJECT-hyprpranav%40gmail.com-00f59b?style=flat-square&logo=gmail&logoColor=021208" /></a> <a href="tel:+917846937655"><img src="https://img.shields.io/badge/WHATSAPP-%2B91_78469_37655-25d366?style=flat-square&logo=whatsapp&logoColor=white" /></a></div> | **🌱 AMPORA (Secondary Initiative)**<br>**Domain:** Student Technical Upskilling, LinkedIn Mastery &amp; Problem Solving<br><br><b>AMPORA</b> was innovated as a peer-to-peer mentorship and skill development initiative within my college network. It equips engineering peers with structured guidance to build strong LinkedIn technical profiles, excel on HackerRank coding challenges, and develop core engineering project competencies.<br><br>• **Core Focus:** LinkedIn Personal Branding, HackerRank Problem Solving, Career Upskilling<br>• **Target Audience:** Engineering Undergrads, Peer Students, Tech Enthusiasts<br>• **Operational Status:** `STUDENT MENTORSHIP &amp; PEER NETWORK`<br><br><div align="center"><a href="mailto:hyprpranav@gmail.com?subject=AMPORA%20Mentorship%20Inquiry"><img src="https://img.shields.io/badge/JOIN_NETWORK-hyprpranav%40gmail.com-facc15?style=flat-square&logo=gmail&logoColor=021208" /></a> <a href="https://linkedin.com/in/hyprpranav"><img src="https://img.shields.io/badge/LINKEDIN-Peer_Mentorship-0077b5?style=flat-square&logo=linkedin&logoColor=white" /></a></div> |
 
 <br />
 
@@ -319,149 +271,15 @@
   <p>Engineered hardware prototypes, community clean-tech modules, and embedded sensor networks.</p>
 </div>
 
-<table width="100%" border="0" cellpadding="8" cellspacing="0">
-
-  <!-- ROW 1: FLORASENSE & GROUNDGUARD -->
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🌲 01. FloraSense (Forest Biosphere &amp; Canopy Telemetry)</h3>
-      <p>
-        <img src="https://img.shields.io/badge/STATUS-ACTIVE_FIELD_R%26D-00f59b?style=flat-square" alt="Status" />
-        <img src="https://img.shields.io/badge/DOMAIN-ECOLOGICAL_IoT-10b981?style=flat-square" alt="Domain" />
-      </p>
-      <p>
-        Deep forest canopy environmental sensing station. Logs forest humidity, soil moisture gradient, river stream turbidity, and acoustic wildlife bio-telemetry over ultra-low-power LoRa mesh nodes powered by energy-harvesting solar capacitors.
-      </p>
-      <p><b>Hardware &amp; Protocols:</b> ESP32-S3, LoRa SX1262, SHT31 Temp/Humidity, Solar Energy Harvester</p>
-      <p><b>Software &amp; Cloud:</b> MicroPython, MQTT, InfluxDB, Leaflet Eco-Map Visualizer</p>
-      <p>
-        🔗 <a href="https://github.com/hyprpranav/florasense-canopy-iot"><code>hyprpranav/florasense-canopy-iot</code></a>
-      </p>
-    </td>
-
-    <td width="50%" valign="top">
-      <h3>🌍 02. GroundGuard</h3>
-      <p>
-        <img src="https://img.shields.io/badge/STATUS-FIELD_TESTED-00f59b?style=flat-square" alt="Status" />
-        <img src="https://img.shields.io/badge/DOMAIN-EARLY_WARNING_IoT-14b8a6?style=flat-square" alt="Domain" />
-      </p>
-      <p>
-        Autonomous geotechnical &amp; seismic early-warning sensor station. Continuous multi-axis vibration analysis, soil liquefaction detection, and tilt telemetry capable of triggering acoustic alarms and broadcast alerts over emergency LoRaWAN mesh networks ahead of destructive S-waves.
-      </p>
-      <p><b>Hardware &amp; Protocols:</b> ESP32-S3, ADXL355 High-Res Accelerometer, LoRa SX1262, Solar MPPT</p>
-      <p><b>Software &amp; Cloud:</b> MicroPython, MQTT, Node-RED, GeoJSON Mapping API</p>
-      <p>
-        🔗 <a href="https://github.com/hyprpranav/groundguard-early-warning"><code>hyprpranav/groundguard-early-warning</code></a>
-      </p>
-    </td>
-  </tr>
-
-  <!-- ROW 2: NEOGUARD & NEOLUMA -->
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🛡️ 03. NeoGuard</h3>
-      <p>
-        <img src="https://img.shields.io/badge/STATUS-DEPLOYED_LAB-00f59b?style=flat-square" alt="Status" />
-        <img src="https://img.shields.io/badge/DOMAIN-SMART_SECURITY-38bdf8?style=flat-square" alt="Domain" />
-      </p>
-      <p>
-        Smart perimeter surveillance and threat neutralization node. Integrates dual PIR and ultrasonic sensor fusion with edge vision to detect intrusions, log unauthorized breaches, and broadcast encrypted instant telegram/email telematics with snapshot verification.
-      </p>
-      <p><b>Hardware &amp; Protocols:</b> Raspberry Pi Zero 2W, ESP32-CAM, Ultrasonic Arrays, GSM/GPRS</p>
-      <p><b>Software &amp; Cloud:</b> OpenCV Edge Inference, C++, WebSockets, Telegram Bot API</p>
-      <p>
-        🔗 <a href="https://github.com/hyprpranav/neoguard-security-system"><code>hyprpranav/neoguard-security-system</code></a>
-      </p>
-    </td>
-
-    <td width="50%" valign="top">
-      <h3>💡 04. NeoLuma</h3>
-      <p>
-        <img src="https://img.shields.io/badge/STATUS-PILOT_READY-00f59b?style=flat-square" alt="Status" />
-        <img src="https://img.shields.io/badge/DOMAIN-SMART_ENERGY-10b981?style=flat-square" alt="Domain" />
-      </p>
-      <p>
-        Intelligent municipal adaptive street-lighting grid. Dynamically modulates luminance based on vehicular traffic density, pedestrian presence, and ambient lux levels, delivering up to 42% energy reduction while alerting operators to burnt-out LEDs through remote mesh diagnostics.
-      </p>
-      <p><b>Hardware &amp; Protocols:</b> ATmega328P / ESP8266, LDR Lux Sensor, Microwave Doppler Radar, Triac Dimmers</p>
-      <p><b>Software &amp; Cloud:</b> Embedded C, MQTT Broker, React Admin Portal, Firebase</p>
-      <p>
-        🔗 <a href="https://github.com/hyprpranav/neoluma-smart-lighting"><code>hyprpranav/neoluma-smart-lighting</code></a>
-      </p>
-    </td>
-  </tr>
-
-  <!-- ROW 3: BELTIVA & AUTOSENSE -->
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🩺 05. Beltiva</h3>
-      <p>
-        <img src="https://img.shields.io/badge/STATUS-FUNCTIONAL_PROTOTYPE-00f59b?style=flat-square" alt="Status" />
-        <img src="https://img.shields.io/badge/DOMAIN-BIOMEDICAL_WEARABLE-a3e635?style=flat-square" alt="Domain" />
-      </p>
-      <p>
-        Ergonomic smart wearable assistive belt engineered for real-time lumbar posture tracking, geriatric fall impact detection, and respiratory rhythm monitoring. Features haptic biofeedback motors and an emergency SOS beacon linked via Bluetooth Low Energy (BLE) to mobile apps.
-      </p>
-      <p><b>Hardware &amp; Protocols:</b> Nordic nRF52840, MPU-6050 6-DOF IMU, Flexible Strain Sensor, Haptic Driver</p>
-      <p><b>Software &amp; Cloud:</b> Zephyr RTOS, BLE GATT Server, Flutter Companion App</p>
-      <p>
-        🔗 <a href="https://github.com/hyprpranav/beltiva-smart-wearable"><code>hyprpranav/beltiva-smart-wearable</code></a>
-      </p>
-    </td>
-
-    <td width="50%" valign="top">
-      <h3>🚗 06. AutoSense</h3>
-      <p>
-        <img src="https://img.shields.io/badge/STATUS-PROTOTYPE_BENCH-00f59b?style=flat-square" alt="Status" />
-        <img src="https://img.shields.io/badge/DOMAIN-AUTOMOTIVE_TELEMATICS-14b8a6?style=flat-square" alt="Domain" />
-      </p>
-      <p>
-        Intelligent vehicular blind-spot radar and collision avoidance auxiliary computer. Combines multi-directional millimeter-wave / ultrasonic proximity sensors with vehicle speed telemetry to project predictive collision cones and activate audible and HUD visual alerts for driver safety.
-      </p>
-      <p><b>Hardware &amp; Protocols:</b> STM32 Nucleo, 24GHz mmWave Radar, CAN Transceiver, OLED HUD</p>
-      <p><b>Software &amp; Cloud:</b> Embedded C++, FreeRTOS, OBD-II Protocol Interface</p>
-      <p>
-        🔗 <a href="https://github.com/hyprpranav/autosense-vehicular-telematics"><code>hyprpranav/autosense-vehicular-telematics</code></a>
-      </p>
-    </td>
-  </tr>
-
-  <!-- ROW 4: SMART RAILWAY & GOBARDHAN -->
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🚆 07. Smart Railway Safety System</h3>
-      <p>
-        <img src="https://img.shields.io/badge/STATUS-INNOVATION_AWARD-00f59b?style=flat-square" alt="Status" />
-        <img src="https://img.shields.io/badge/DOMAIN-TRANSIT_INFRASTRUCTURE-00f59b?style=flat-square" alt="Domain" />
-      </p>
-      <p>
-        Automated railway track crack detection, obstruction mitigation, and unmanned level-crossing safety module. Utilizes laser triangulation, IR arrays, and acoustic emission transducers on inspection trolleys with real-time GPS coordinate logging over GSM to prevent train derailments.
-      </p>
-      <p><b>Hardware &amp; Protocols:</b> Arduino Mega / ESP32, Laser Profiler, GPS NEO-6M, GSM SIM800L</p>
-      <p><b>Software &amp; Cloud:</b> Embedded C, SMS &amp; Cloud Webhook Telemetry, Leaflet GIS Dashboard</p>
-      <p>
-        🔗 <a href="https://github.com/hyprpranav/smart-railway-safety-system"><code>hyprpranav/smart-railway-safety-system</code></a>
-      </p>
-    </td>
-
-    <td width="50%" valign="top">
-      <h3>🌱 08. GOBARdhan</h3>
-      <p>
-        <img src="https://img.shields.io/badge/STATUS-COMMUNITY_PILOT-00f59b?style=flat-square" alt="Status" />
-        <img src="https://img.shields.io/badge/DOMAIN-CLEANTECH_AGRITECH-a3e635?style=flat-square" alt="Domain" />
-      </p>
-      <p>
-        IoT-automated bio-digester monitoring and bio-slurry quality assessment node supporting rural clean energy initiatives. Real-time logging of methane (CH4) concentrations, reactor pH, slurry temperature, and pressure containment with automated pressure release valve actuation.
-      </p>
-      <p><b>Hardware &amp; Protocols:</b> ESP32, MQ-4 Methane Sensor, Industrial pH Probe, DS18B20, Servo Actuator</p>
-      <p><b>Software &amp; Cloud:</b> C++, MQTT, ThingsBoard IoT Cloud, SMS Farmer Advisory</p>
-      <p>
-        🔗 <a href="https://github.com/hyprpranav/gobardhan-biogas-iot"><code>hyprpranav/gobardhan-biogas-iot</code></a>
-      </p>
-    </td>
-  </tr>
-
-</table>
+| 🌲 **01. FloraSense (Canopy IoT)** | 🌍 **02. GroundGuard (Seismic IoT)** |
+| :--- | :--- |
+| ![Status](https://img.shields.io/badge/STATUS-ACTIVE_FIELD_R%26D-00f59b?style=flat-square) ![Domain](https://img.shields.io/badge/DOMAIN-ECOLOGICAL_IoT-10b981?style=flat-square)<br><br>Deep forest canopy environmental sensing station. Logs forest humidity, soil moisture gradient, river stream turbidity, and acoustic wildlife bio-telemetry over ultra-low-power LoRa mesh nodes powered by energy-harvesting solar capacitors.<br><br>**Hardware &amp; Protocols:** ESP32-S3, LoRa SX1262, SHT31 Temp/Humidity, Solar Energy Harvester<br>**Software &amp; Cloud:** MicroPython, MQTT, InfluxDB, Leaflet Eco-Map Visualizer<br>🔗 [`hyprpranav/florasense-canopy-iot`](https://github.com/hyprpranav/florasense-canopy-iot) | ![Status](https://img.shields.io/badge/STATUS-FIELD_TESTED-00f59b?style=flat-square) ![Domain](https://img.shields.io/badge/DOMAIN-EARLY_WARNING_IoT-14b8a6?style=flat-square)<br><br>Autonomous geotechnical &amp; seismic early-warning sensor station. Continuous multi-axis vibration analysis, soil liquefaction detection, and tilt telemetry capable of triggering acoustic alarms and broadcast alerts over emergency LoRaWAN mesh networks ahead of destructive S-waves.<br><br>**Hardware &amp; Protocols:** ESP32-S3, ADXL355 High-Res Accelerometer, LoRa SX1262, Solar MPPT<br>**Software &amp; Cloud:** MicroPython, MQTT, Node-RED, GeoJSON Mapping API<br>🔗 [`hyprpranav/groundguard-early-warning`](https://github.com/hyprpranav/groundguard-early-warning) |
+| 🛡️ **03. NeoGuard (Perimeter Security)** | 💡 **04. NeoLuma (Adaptive Lighting)** |
+| ![Status](https://img.shields.io/badge/STATUS-DEPLOYED_LAB-00f59b?style=flat-square) ![Domain](https://img.shields.io/badge/DOMAIN-SMART_SECURITY-38bdf8?style=flat-square)<br><br>Smart perimeter surveillance and threat neutralization node. Integrates dual PIR and ultrasonic sensor fusion with edge vision to detect intrusions, log unauthorized breaches, and broadcast encrypted instant telegram/email telematics with snapshot verification.<br><br>**Hardware &amp; Protocols:** Raspberry Pi Zero 2W, ESP32-CAM, Ultrasonic Arrays, GSM/GPRS<br>**Software &amp; Cloud:** OpenCV Edge Inference, C++, WebSockets, Telegram Bot API<br>🔗 [`hyprpranav/neoguard-security-system`](https://github.com/hyprpranav/neoguard-security-system) | ![Status](https://img.shields.io/badge/STATUS-PILOT_READY-00f59b?style=flat-square) ![Domain](https://img.shields.io/badge/DOMAIN-SMART_ENERGY-10b981?style=flat-square)<br><br>Intelligent municipal adaptive street-lighting grid. Dynamically modulates luminance based on vehicular traffic density, pedestrian presence, and ambient lux levels, delivering up to 42% energy reduction while alerting operators to burnt-out LEDs through remote mesh diagnostics.<br><br>**Hardware &amp; Protocols:** ATmega328P / ESP8266, LDR Lux Sensor, Microwave Doppler Radar, Triac Dimmers<br>**Software &amp; Cloud:** Embedded C, MQTT Broker, React Admin Portal, Firebase<br>🔗 [`hyprpranav/neoluma-smart-lighting`](https://github.com/hyprpranav/neoluma-smart-lighting) |
+| 🩺 **05. Beltiva (Biomedical Wearable)** | 🚗 **06. AutoSense (Vehicular Radar)** |
+| ![Status](https://img.shields.io/badge/STATUS-FUNCTIONAL_PROTOTYPE-00f59b?style=flat-square) ![Domain](https://img.shields.io/badge/DOMAIN-BIOMEDICAL_WEARABLE-a3e635?style=flat-square)<br><br>Ergonomic smart wearable assistive belt engineered for real-time lumbar posture tracking, geriatric fall impact detection, and respiratory rhythm monitoring. Features haptic biofeedback motors and an emergency SOS beacon linked via Bluetooth Low Energy (BLE) to mobile apps.<br><br>**Hardware &amp; Protocols:** Nordic nRF52840, MPU-6050 6-DOF IMU, Flexible Strain Sensor, Haptic Driver<br>**Software &amp; Cloud:** Zephyr RTOS, BLE GATT Server, Flutter Companion App<br>🔗 [`hyprpranav/beltiva-smart-wearable`](https://github.com/hyprpranav/beltiva-smart-wearable) | ![Status](https://img.shields.io/badge/STATUS-PROTOTYPE_BENCH-00f59b?style=flat-square) ![Domain](https://img.shields.io/badge/DOMAIN-AUTOMOTIVE_TELEMATICS-14b8a6?style=flat-square)<br><br>Intelligent vehicular blind-spot radar and collision avoidance auxiliary computer. Combines multi-directional millimeter-wave / ultrasonic proximity sensors with vehicle speed telemetry to project predictive collision cones and activate audible and HUD visual alerts for driver safety.<br><br>**Hardware &amp; Protocols:** STM32 Nucleo, 24GHz mmWave Radar, CAN Transceiver, OLED HUD<br>**Software &amp; Cloud:** Embedded C++, FreeRTOS, OBD-II Protocol Interface<br>🔗 [`hyprpranav/autosense-vehicular-telematics`](https://github.com/hyprpranav/autosense-vehicular-telematics) |
+| 🚆 **07. Smart Railway Safety System** | 🌱 **08. GOBARdhan (Biogas Automation)** |
+| ![Status](https://img.shields.io/badge/STATUS-INNOVATION_AWARD-00f59b?style=flat-square) ![Domain](https://img.shields.io/badge/DOMAIN-TRANSIT_INFRASTRUCTURE-00f59b?style=flat-square)<br><br>Automated railway track crack detection, obstruction mitigation, and unmanned level-crossing safety module. Utilizes laser triangulation, IR arrays, and acoustic emission transducers on inspection trolleys with real-time GPS coordinate logging over GSM to prevent train derailments.<br><br>**Hardware &amp; Protocols:** Arduino Mega / ESP32, Laser Profiler, GPS NEO-6M, GSM SIM800L<br>**Software &amp; Cloud:** Embedded C, SMS &amp; Cloud Webhook Telemetry, Leaflet GIS Dashboard<br>🔗 [`hyprpranav/smart-railway-safety-system`](https://github.com/hyprpranav/smart-railway-safety-system) | ![Status](https://img.shields.io/badge/STATUS-COMMUNITY_PILOT-00f59b?style=flat-square) ![Domain](https://img.shields.io/badge/DOMAIN-CLEANTECH_AGRITECH-a3e635?style=flat-square)<br><br>IoT-automated bio-digester monitoring and bio-slurry quality assessment node supporting rural clean energy initiatives. Real-time logging of methane (CH4) concentrations, reactor pH, slurry temperature, and pressure containment with automated pressure release valve actuation.<br><br>**Hardware &amp; Protocols:** ESP32, MQ-4 Methane Sensor, Industrial pH Probe, DS18B20, Servo Actuator<br>**Software &amp; Cloud:** C++, MQTT, ThingsBoard IoT Cloud, SMS Farmer Advisory<br>🔗 [`hyprpranav/gobardhan-biogas-iot`](https://github.com/hyprpranav/gobardhan-biogas-iot) |
 
 <br />
 
